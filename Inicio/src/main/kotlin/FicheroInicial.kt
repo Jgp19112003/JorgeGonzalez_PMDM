@@ -13,14 +13,83 @@ fun main(arg: Array<String>){
     //var (normal) val(constante)
     //lateinit
 
-    var nombre: String? = null
+    /*var nombre: String? = null
     var edad: Int = 18
     var aficiones: Array<String>;
     val DNI = "123456789A"
     nombre = readLine();
 
     println("Primera ejecucion de Kotlin")
-    println("Hola soy ${nombre} y tengo ${edad} años")
+    println("Hola soy ${nombre} y tengo ${edad} años")*/
+
+
+// fun nombre (parametros): tipo retorno --> Unit es el void de java
+fun etructuraIf() {
+    println("Estructura de control If")
+    // id (c) {} else {}
+    // id (c) {} else if (c) {} else {}
+    var nombre: String? = null
+    println("Introduce tu nombre")
+    nombre = readLine();
+
+
+    // evaluar si la longuitud del nombre es mas grnade que 5
+    // en ese caso sacar por consola un nombre demasiado grade
+    // en caso contrario sacar por consola nombre correcto
+
+    if (nombre?.length!! > 5){
+        println("Nombre demsaiado largo")
+    }else{
+        println("Nombre correcto")
+    }
+
+}
+fun etructuraFor() {
+    // for (i=0;i<10;i++){}
+    // for (i in 1..10){}
+    for (i in 1..50 step 2){
+        //println(i)
+        //(int) (Math.rancom() * 51)
+        var aleatorio = (1..50).random()
+        println(aleatorio)
+    }
+}
+
+    var suma: Int = 0
+    var media: Double = 0.0
+    var max: Int = 0
+    var min: Int = 999999
+    var edad  = 0
+
+    println("Introduce edad")
+    edad = readLine()!!.toInt()
+    if (edad > 18){
+        println("Edad correcta")
+    for (i in 1..10){
+        //println(i)
+        //(int) (Math.rancom() * 51)
+        var aleatorio = (1..100).random()
+        println(aleatorio)
+        suma += aleatorio
+        media =  suma.toDouble()/10
+
+        if (aleatorio > max){
+            max = aleatorio
+        }
+        if (aleatorio < min) {
+            min = aleatorio
+        }
+
+    }
+        println("La suma es: ${suma}")
+        println("La media es: ${media}")
+        println("El numero maximo es: ${max}")
+        println("El numero minimo es: ${min}")
+    } else{
+        println("Edad incorrecta")
+    }
 
 
 }
+
+
