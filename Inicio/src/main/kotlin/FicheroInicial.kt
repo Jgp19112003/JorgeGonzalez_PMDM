@@ -89,6 +89,54 @@ fun etructuraFor() {
         println("Edad incorrecta")
     }
 
+    // froeach
+    (1..10).forEach({item ->
+        println("Ejecucion del foreach")
+        println(item) })
+
+    fun estrcturaWhen(){
+        // when dato{
+        // valor -> {ejecuta}
+        // valor -> {ejecuta}
+        // valor -> {ejecuta}
+        // default -> {ejecuta}
+        // }
+
+        println("Porfavor introdice la nota del examen")
+        var nota = readLine()!!.toInt()
+        when(nota){
+            1->{
+                println("Examen nulo")
+            }5->{
+                println("Examen justo")
+            }10->{
+                println("Examen perfecto")
+            }
+        }
+    }
+
+    var arrayPalabras: Array<String?> = arrayOfNulls<String>(5)
+    arrayPalabras[0] = "Hola"
+    arrayPalabras[1] = "que"
+    arrayPalabras[2] = "tal"
+    arrayPalabras[3] = "estas"
+    arrayPalabras[4] = "tu"
+
+
+    arrayPalabras.forEachIndexed({index, value ->
+        if (index %2 == 0) {
+            println("${value}")
+        }
+    })
+
+    arrayPalabras.forEach { item ->
+        if (item?.length!! > 5){
+            println(item)
+        }
+    }
+
+
+
 
 }
 
