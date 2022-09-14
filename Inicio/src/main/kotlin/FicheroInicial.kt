@@ -130,7 +130,7 @@ fun etructuraFor() {
     })
 
     arrayPalabras.forEach { item ->
-        if (item?.length!! > 5){
+        if (item?.length!! >= 5){
             println(item)
         }
     }
