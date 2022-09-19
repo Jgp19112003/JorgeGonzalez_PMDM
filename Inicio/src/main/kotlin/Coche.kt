@@ -5,6 +5,10 @@ class Coche {
     var  marca: String
     var  modelo: String
     var  cv: Int
+        set(cv){
+            field = cv;
+        }
+        get() = field
     var  bastidor: String? = null
     var  velocidad: Int? = 0
 
@@ -19,12 +23,5 @@ class Coche {
     }
 
     var decelerar: (Int) -> Boolean = {v -> if (this.velocidad!! - v < 0 ) false else true}
-
-
-    fun frena(){
-        for(i = velocidad in ){
-
-        }
-    }
 
 }
