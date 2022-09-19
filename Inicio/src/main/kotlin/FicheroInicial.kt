@@ -135,8 +135,20 @@ fun etructuraFor() {
         }
     }
 
+  //  arrayPalabras.filter ({ elemento : String? -> })
 
+    var listaAlumnosKt = ArrayList<String>()
+    listaAlumnosKt.add("Jorge")
+    listaAlumnosKt.add("Hunter")
+    listaAlumnosKt.add("Alex")
+    listaAlumnosKt.add("Zama")
 
+    listaAlumnosKt.forEach({ println(it) })
+
+    fun funcionParametro(arg1: String, arg2: Int){
+        println("$arg1")
+        println("$arg2")
+    }
 
 }
 
