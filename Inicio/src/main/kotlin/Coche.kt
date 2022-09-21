@@ -1,27 +1,59 @@
 import kotlin.concurrent.thread
 
-class Coche {
+class Coche(var marca: String, var modelo: String) {
 
-    var  marca: String
-    var  modelo: String
-    var  cv: Int
-        set(cv){
+    // variables
+    var cv: Int? = null
+        set(cv) {
+            println("Setter ejecutado")
             field = cv;
         }
         get() = field
-    var  bastidor: String? = null
-    var  velocidad: Int? = 0
+    var bastidor: String? = null;
+    var velocidad: Int? = null;
+    lateinit var propietario: Propietario
 
-    constructor(marca: String, modelo: String, cv: Int){
-        this.marca = marca;
-        this.modelo = modelo;
+    // constructores
+    // public Coche(){}
+    constructor(marca: String, modelo: String, cv: Int) : this(marca, modelo) {
         this.cv = cv;
+        this.velocidad = 0;
     }
 
-    fun acelerar(velocidad: Int){
+    constructor(marca: String, modelo: String, cv: Int, bastidor: String) : this(marca, modelo) {
+        this.cv = cv;
+        this.bastidor = bastidor;
+        this.velocidad = 0;
+    }
+
+    // metodos
+    fun aumentarVelocidad(velocidad: Int) {
         this.velocidad = this.velocidad?.plus(velocidad);
     }
 
-    var decelerar: (Int) -> Boolean = {v -> if (this.velocidad!! - v < 0 ) false else true}
+    // si intento frenar mas de la v a la que va el coche --> false v =0
+    // si intento frenar menos o igual de la v a la que va el coche --> true v = resta
+    var disminucionVelocidad: (Int) -> Boolean = { v ->
+        if ((this.velocidad!! - v) < 0) false
+        else true
+    }
+
+    // crear metodos que permitan al coche aumentar la velocidad,
+    // reducir la velocidad y parar el coche
+
+    // getter - setter
+    // tal cual los sabemos
+    fun getVelocidad(): Int {
+        return this.velocidad ?: 0;
+    }
+
+    fun setVelocidad(velocidad: Int) {
+        this.velocidad = velocidad;
+    }
+
+    fun asignarPropietarios(propietario: Propietario) {
+        this.propietario = propietario
+    }
+
 
 }
