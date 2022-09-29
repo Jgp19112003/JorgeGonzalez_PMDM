@@ -9,6 +9,7 @@ class Empresa() {
 
     var trabajadores: ArrayList<Persona>?;
     var jefes: ArrayList<Jefe>?;
+    var trabajador_despedido: Persona? = null
 
 
     init {
@@ -75,18 +76,20 @@ class Empresa() {
                 var dni_empleado: String? = null
                 println("Introduzca DNI del trabajador a despedir: ")
                 dni_empleado = readLine()?.toString()
-                trabajadores?.forEach{ trabajador ->
-                    if (dni_empleado == trabajador.getDNI()){
-                      //trabajadores!!.remove(trabajador)
+                trabajadores?.forEach { trabajador ->
+                    if (dni_empleado == trabajador.getDNI()) {
+                        trabajador_despedido = trabajador
                         println("Trabajador despedido")
                     } else {
                         println("El trabajador no existe.")
+
                     }
                 }
             } else {
                 println("Solo puede realizar un despido un trabajador.")
             }
         }
+        trabajadores!!.remove(trabajador_despedido)
     }
 }
 
