@@ -1,4 +1,4 @@
-package model
+package TrabajadoresHerencia.model
 
 final class Asalariado(nombre: String, apellido: String, dni:String, var salario: Int, var numeroPagas: Int) :
         Persona(nombre, apellido, dni) {

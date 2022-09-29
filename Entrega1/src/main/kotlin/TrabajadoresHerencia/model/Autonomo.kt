@@ -1,4 +1,4 @@
-package model
+package TrabajadoresHerencia.model
 
 class Autonomo (nombre: String, apellido: String, dni: String, var salario: Int = 0) : Persona(nombre, apellido, dni) {
 

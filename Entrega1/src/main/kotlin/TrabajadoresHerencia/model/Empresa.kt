@@ -1,9 +1,9 @@
-package model.model
+package TrabajadoresHerencia.model.model
 
-import model.Asalariado
-import model.Autonomo
-import model.Jefe
-import model.Persona
+import TrabajadoresHerencia.model.Asalariado
+import TrabajadoresHerencia.model.Autonomo
+import TrabajadoresHerencia.model.Jefe
+import TrabajadoresHerencia.model.Persona
 
 class Empresa() {
 
