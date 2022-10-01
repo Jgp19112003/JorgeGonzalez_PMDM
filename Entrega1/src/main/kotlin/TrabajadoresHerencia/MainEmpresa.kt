@@ -110,7 +110,7 @@ fun main() {
 
 
     } while (opc != 0)
-}
+}//JP
 
 fun readLine(beneficio: Double) {
     TODO("Not yet implemented")
