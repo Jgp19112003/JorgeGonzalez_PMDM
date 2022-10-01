@@ -71,7 +71,7 @@ class Empresa() {
     }
 
     fun despedirTrabajador(dni: String) {
-        trabajadores?.forEach { persona ->
+        trabajadores?.forEach{ persona ->
             if (dni.equals(persona.getDNI()) && persona is Jefe) {
                 var dni_empleado: String? = null
                 println("Introduzca DNI del trabajador a despedir: ")
