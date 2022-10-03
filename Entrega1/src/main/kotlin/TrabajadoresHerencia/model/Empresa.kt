@@ -32,18 +32,21 @@ class Empresa() {
                         persona.mostrarDatos()
                     }
                 }
+
                 "asalariados" -> {
                     if (persona is Asalariado) {
                         persona.mostrarDatos()
                     }
 
                 }
+
                 "autonomos" -> {
                     if (persona is Autonomo) {
                         persona.mostrarDatos()
                     }
 
                 }
+
                 else -> {
                     persona.mostrarDatos()
                 }
@@ -71,31 +74,30 @@ class Empresa() {
     }
 
     fun despedirTrabajador(dni: String) {
-        trabajadores?.forEach{ persona ->
+        trabajadores?.forEach { persona ->
             if (dni.equals(persona.getDNI()) && persona is Jefe) {
                 var dni_empleado: String? = null
                 println("Introduzca DNI del trabajador a despedir: ")
                 dni_empleado = readLine()?.toString()
-<<<<<<< HEAD:Entrega1/src/main/kotlin/model/Empresa.kt
-                trabajadores?.forEach{ trabajador ->
-                    if (dni_empleado == trabajador.getDNI()){
-                       trabajadores!!.remove(trabajador)
-=======
                 trabajadores?.forEach { trabajador ->
                     if (dni_empleado == trabajador.getDNI()) {
-                        trabajador_despedido = trabajador
->>>>>>> 1fd87b286737edb129d1e59d0e648ff2002f552a:Entrega1/src/main/kotlin/TrabajadoresHerencia/model/Empresa.kt
-                        println("Trabajador despedido")
-                    } else {
-                        println("El trabajador no existe.")
+                        trabajadores!!.remove(trabajador)
+                        trabajadores?.forEach { trabajador ->
+                            if (dni_empleado == trabajador.getDNI()) {
+                                trabajador_despedido = trabajador
+                                println("Trabajador despedido")
+                            } else {
+                                println("El trabajador no existe.")
 
+                            }
+                        }
+                    } else {
+                        println("Solo puede realizar un despido un trabajador.")
                     }
                 }
-            } else {
-                println("Solo puede realizar un despido un trabajador.")
+                trabajadores!!.remove(trabajador_despedido)
             }
         }
-        trabajadores!!.remove(trabajador_despedido)
     }
 }
 
