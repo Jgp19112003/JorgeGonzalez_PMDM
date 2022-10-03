@@ -77,7 +77,7 @@ class Empresa() {
                 dni_empleado = readLine()?.toString()
                 trabajadores?.forEach{ trabajador ->
                     if (dni_empleado == trabajador.getDNI()){
-                      //trabajadores!!.remove(trabajador)
+                       trabajadores!!.remove(trabajador)
                         println("Trabajador despedido")
                     } else {
                         println("El trabajador no existe.")
