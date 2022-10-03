@@ -1,7 +1,7 @@
-import model.Asalariado
-import model.Autonomo
-import model.Jefe
-import model.model.Empresa
+import TrabajadoresHerencia.model.Asalariado
+import TrabajadoresHerencia.model.Autonomo
+import TrabajadoresHerencia.model.Jefe
+import TrabajadoresHerencia.model.model.Empresa
 
 fun main() {
 
@@ -110,7 +110,7 @@ fun main() {
 
 
     } while (opc != 0)
-}
+}//JP
 
 fun readLine(beneficio: Double) {
     TODO("Not yet implemented")

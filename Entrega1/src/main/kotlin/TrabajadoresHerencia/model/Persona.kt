@@ -1,4 +1,4 @@
-package model
+package TrabajadoresHerencia.model
 
 
 open abstract class Persona(protected var nombre: String, protected var apellido: String, protected var dni: String) {

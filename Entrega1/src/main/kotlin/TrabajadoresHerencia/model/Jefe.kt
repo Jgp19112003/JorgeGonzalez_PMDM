@@ -1,4 +1,4 @@
-package model
+package TrabajadoresHerencia.model
 
 final class Jefe(nombre: String, apellido: String, dni: String, var acciones: Int = 0, var beneficio: Double = 0.0) : Persona(nombre, apellido, dni) {
 
