@@ -24,5 +24,23 @@ class Jugador(id: Int,nombre: String) : Persona(id, nombre) {
         println(valor)
     }
 
+    fun setPOSICION(posicion: String) {
+        this.posicion = posicion;
+    }
+
+    fun getPOSICION(): String{
+        return this.posicion!!;
+    }
+
+    fun setNOMBRE(nombre: String) {
+        this.nombre = nombre;
+    }
+
+    fun getNOMBRE(): String {
+        return this.nombre;
+    }
+
+
+
 
 }

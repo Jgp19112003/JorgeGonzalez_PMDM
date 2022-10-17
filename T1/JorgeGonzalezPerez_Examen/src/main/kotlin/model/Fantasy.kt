@@ -10,20 +10,13 @@ class Fantasy {
     var puntuaciones: ArrayList<Jugador>
     var ganador: Participante? = null
     var puntos_ganador: Int = 0
-    var portero: Int = 0
-    var hayportero: Boolean?= null
-    var defensa: Int = 0
-    var haydefenesa: Boolean?= null
-    var delantero: Int = 0
-    var haydelantero: Boolean?= null
-    var mediocentro: Int = 0
-    var haymedio: Boolean?= null
+    var jugador_existente: Boolean? = null
 
     constructor(
-        jugadores: ArrayList<Jugador>,
-        puntuaciones: ArrayList<Jugador>,
-        participantes: ArrayList<Participante>,
-        admins: ArrayList<Administrador>
+            jugadores: ArrayList<Jugador>,
+            puntuaciones: ArrayList<Jugador>,
+            participantes: ArrayList<Participante>,
+            admins: ArrayList<Administrador>
     ) {
         this.jugadores = jugadores
         this.puntuaciones = puntuaciones
@@ -53,45 +46,11 @@ class Fantasy {
         jugadores.forEach { jugador: Jugador ->
             if (jugador.id == id && participante.presupuesto > jugador.valor!!) {
                 participante.presupuesto = participante.presupuesto - jugador.valor!!
-                participante.plantilla.forEach{jugador: Jugador ->
-                    if (jugador.posicion.equals("Portero") && portero != 1){
-                        hayportero
-                    }
-                    if (jugador.posicion.equals("Defensa") && defensa != 2){
-                        haydefenesa
-                    }
-                    if (jugador.posicion.equals("Mediocentro") && mediocentro != 2){
-                        haymedio
-                    }
-                    if (jugador.posicion.equals("Delantero") && delantero != 1){
-                        haydelantero
-                    }
-                }
-                if (hayportero == true){
-                    participante.plantilla.add(jugador)
-                    portero++
-                    jugadores.remove(jugador)
-                    println("Jugador añadido")
-                }
-                if (haydefenesa == true){
-                    participante.plantilla.add(jugador)
-                    defensa++
-                    jugadores.remove(jugador)
-                    println("Jugador añadido")
-                }
-                if (haymedio == true){
-                    participante.plantilla.add(jugador)
-                    mediocentro++
-                    jugadores.remove(jugador)
-                    println("Jugador añadido")
-                }
-                if (haydelantero == true){
-                    participante.plantilla.add(jugador)
-                    portero++
-                    jugadores.remove(jugador)
-                    println("Jugador añadido")
-                }
+                participante.plantilla.add(jugador)
             }
+        }
+        participante.getPLANTILLA().forEach { jugador: Jugador ->
+            println(jugador.getNOMBRE())
         }
     }
 
@@ -104,9 +63,9 @@ class Fantasy {
 
     }
 
-    fun listarJugadores(){
-        jugadores.forEach{jugador ->
-            if (jugador.valor!! >= 3000000){
+    fun listarJugadores() {
+        jugadores.forEach { jugador ->
+            if (jugador.valor!! >= 3000000) {
                 print(jugador.mostrarDatos())
             }
         }
