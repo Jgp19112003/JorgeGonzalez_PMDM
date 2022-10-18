@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">IMC</string>
+    <string name="textoPeso">Introduzca su peso</string>
+    <string name="textoAltura">Introduzca su altura</string>
+    <string name="textoSexo">Introduzca su sexo</string>
+    <string name="botonEvaluar">Evaluar</string>
 </resources>
