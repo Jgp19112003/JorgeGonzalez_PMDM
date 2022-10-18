@@ -24,40 +24,51 @@
         android:textAlignment="center"
         android:layout_height="wrap_content"
         android:id="@+id/texto_bienvenida"
-        android:layout_marginBottom="10dp"
         />
 
     <LinearLayout
+        android:layout_marginTop="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:gravity="center"
         >
 
-    <Button
-        android:layout_width="0dp"
-        android:layout_weight="0.5"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="@string/texto_pulsar"
-        android:id="@+id/boton_pulsar" />
-    <Button
-        android:layout_width="0dp"
-        android:layout_weight="0.5"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="@string/texto_pulsar"
-        android:id="@+id/boton_pasar" />
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/texto_pulsar"
+            android:id="@+id/boton_pulsar"
 
-</LinearLayout>
+            />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/texto_pasar"
+            android:id="@+id/boton_pasar"
+            />
+
+    </LinearLayout>
+
+
 
     <EditText
-        android:id="@+id/texto_introducido"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text=""
-
+        android:layout_marginTop="@dimen/paddingNormal"
+        android:id="@+id/edit_nombre"
+        android:inputType="text"
+        android:drawableLeft="@android:drawable/ic_menu_agenda"
+        android:drawablePadding="@dimen/paddingDrawable"
         />
+
+
+
+
 
 </LinearLayout>

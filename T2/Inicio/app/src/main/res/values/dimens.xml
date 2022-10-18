@@ -3,5 +3,8 @@
 
     <dimen name="textNormal">20sp</dimen>
     <dimen name="paddingNormal">20dp</dimen>
+    <dimen name="paddingDrawable">20dp</dimen>
+    <dimen name="textogrande">25dp</dimen>
+    <dimen name="textomediano">20dp</dimen>
 
 </resources>
