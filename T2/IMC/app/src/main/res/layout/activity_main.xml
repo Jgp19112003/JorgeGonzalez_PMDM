@@ -18,7 +18,8 @@
         android:layout_width="0dp"
         android:layout_weight="0.5"
         android:layout_height="wrap_content"
-        android:text="Altura"
+        android:textAlignment="center"
+        android:text="Peso"
         />
 
     <EditText
@@ -27,27 +28,59 @@
         android:layout_weight="0.5"
         android:textAlignment="center"
         android:id="@+id/textoPeso"
-        android:text="@string/textoPeso"
-
+        android:hint="@string/textoPeso"
         />
 </LinearLayout>
 
-    <EditText
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textAlignment="center"
-        android:id="@+id/textoAltura"
-        android:text="@string/textoAltura"
+        >
 
-        />
-    <EditText
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="Altura" />
+
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:textAlignment="center"
+            android:id="@+id/textoAltura"
+            android:hint="@string/textoAltura"
+
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:layout_weight="0.5"
+            android:text="Sexo" />
+
+    <EditText
+        android:textSize="17dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.5"
+        android:textAlignment="center"
         android:id="@+id/textoSexo"
-        android:text="@string/textoSexo"
-        android:textAlignment="center"
+        android:hint="@string/textoSexo"
 
         />
+
+    </LinearLayout>
 
     <Button
         android:layout_width="wrap_content"
@@ -56,6 +89,15 @@
         android:id="@+id/botonEvaluar"
         android:text="@string/botonEvaluar"
         />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="fitCenter"
+        android:src="@drawable/strenght"
+        android:id="@+id/imagen_strenght"
+        />
+
 
 
 

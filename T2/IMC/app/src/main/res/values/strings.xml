@@ -2,6 +2,9 @@
     <string name="app_name">IMC</string>
     <string name="textoPeso">Introduzca su peso</string>
     <string name="textoAltura">Introduzca su altura</string>
-    <string name="textoSexo">Introduzca su sexo</string>
+    <string name="textoSexo">Introduzca su sexo (M/F)</string>
     <string name="botonEvaluar">Evaluar</string>
+    <string name="textoIndice">Tu indice de masa corporal es: </string>
+    <string name="textoIMC"> 50 </string>
+    <string name="textoEstado"> normal </string>
 </resources>
