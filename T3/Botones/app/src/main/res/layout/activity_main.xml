@@ -67,6 +67,7 @@
             android:layout_width="60dp"
             android:layout_height="wrap_content"
             android:background="@drawable/fondo_toggle"
+            android:id="@+id/botonToggle"
 
             />
 
@@ -78,5 +79,77 @@
             />
 
     </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioGroup
+            android:layout_marginTop="@dimen/marging_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/grupoRadios">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Opcion 1"
+                android:gravity="center_vertical|end"
+                android:id="@+id/opc1"
+                />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Opcion 2"
+                android:id="@+id/opc2"
+                />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Opcion 3"
+                android:id="@+id/opc3"
+                />
+
+
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Resultado radio button"
+            android:gravity="center_vertical|end"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/checkEstado"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical|end"
+            android:text="Check resultado"
+            />
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Pulsar"
+        android:id="@+id/botonPulsar"
+        />
+
 
 </LinearLayout>
