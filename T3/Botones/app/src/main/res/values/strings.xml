@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Botones</string>
+    <string name="texto_pulsar">Pulsar</string>
+    <string name="explicacion_fl">Explicacion FL</string>
+    <string name="check_resultado">Check resultado</string>
+    <string name="resultado_radio_button">Resultado radio button</string>
+    <string name="opcion_3">Opcion 3</string>
+    <string name="opcion_2">Opcion 2</string>
+    <string name="opcion_1">Opcion 1</string>
+    <string name="resultado_pulsacion">Resultado pulsacion</string>
 </resources>

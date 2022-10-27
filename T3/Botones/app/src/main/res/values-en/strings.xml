@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Buttons</string>
+    <string name="texto_pulsar">Click</string>
+    <string name="explicacion_fl">FL Explication</string>
+    <string name="check_resultado">Check result</string>
+    <string name="resultado_radio_button">Radio button result</string>
+    <string name="opcion_3">Option 3</string>
+    <string name="opcion_2">Option 2</string>
+    <string name="opcion_1">Option 1</string>
+    <string name="resultado_pulsacion">Click result</string>
+</resources>
