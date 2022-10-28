@@ -1,9 +1,12 @@
 package com.example.juegoupdown
 
+import android.app.Application
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.widget.Button
+import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
@@ -28,11 +31,15 @@ class SecondActivity : AppCompatActivity() {
         R.drawable.c12,
         R.drawable.c13
     )
+    lateinit var bmayor: ImageButton
+    lateinit var bmenor: ImageButton
+
     lateinit var nombreRecuperado: String;
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.game_activity)
+        instancias()
         recuperarDatos()
         iniciarUI()
     }
@@ -42,7 +49,7 @@ class SecondActivity : AppCompatActivity() {
 
         val texto = nombreRecuperado;
         var notificacion =
-            Snackbar.make(, "Bienvenido " + texto, Snackbar.LENGTH_INDEFINITE)
+            Snackbar.make(bmayor, "Bienvenido " + texto, Snackbar.LENGTH_INDEFINITE)
 
         notificacion.setAction("Empezar") {
             // pasar de activity
@@ -62,6 +69,11 @@ class SecondActivity : AppCompatActivity() {
         var bundleRecuperado: Bundle? = intent.extras;
         nombreRecuperado = bundleRecuperado?.getString("nombre", "Jugador").toString()
 
+    }
+
+    private fun instancias(){
+        bmayor = findViewById(R.id.bmayor)
+        bmenor = findViewById(R.id.bmenor)
     }
 }
 

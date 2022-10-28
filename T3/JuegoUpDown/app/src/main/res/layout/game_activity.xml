@@ -1,6 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".SecondActivity">
+
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/cf"
+            android:scaleType="fitXY"
+            />
+
+
+        <ImageButton
+            android:id="@+id/bmayor"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginLeft="130dp"
+            android:scaleType="fitCenter"
+            android:alpha="0.5"
+            android:src="@drawable/up" />
+
+        <ImageButton
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="575dp"
+            android:layout_marginLeft="130dp"
+            android:scaleType="fitCenter"
+            android:alpha="0.5"
+            android:id="@+id/bmenor"
+            android:src="@drawable/down" />
+    </FrameLayout>
 
 </LinearLayout>
