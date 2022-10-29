@@ -5,6 +5,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.view.View.OnClickListener
 import android.widget.Button
 import android.widget.ImageButton
 import android.widget.ImageView
@@ -12,7 +13,7 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.snackbar.Snackbar
 
-class SecondActivity : AppCompatActivity() {
+class SecondActivity : AppCompatActivity(){
 
 
     var carta_aleatoria: Int = 0
@@ -33,6 +34,7 @@ class SecondActivity : AppCompatActivity() {
     )
     lateinit var bmayor: ImageButton
     lateinit var bmenor: ImageButton
+    lateinit var imagenCarta: ImageView
 
     lateinit var nombreRecuperado: String;
 
@@ -54,12 +56,7 @@ class SecondActivity : AppCompatActivity() {
         notificacion.setAction("Empezar") {
             // pasar de activity
             // INTENT -> acciones
-
-            for (item: Int in cartas) {
-                var aleatorio: Int
-                aleatorio = (Math.random() * 14).toInt()
-                carta_aleatoria = cartas[aleatorio]
-            }
+            cartaRoll()
         }
         notificacion.show()
     }
@@ -74,6 +71,22 @@ class SecondActivity : AppCompatActivity() {
     private fun instancias(){
         bmayor = findViewById(R.id.bmayor)
         bmenor = findViewById(R.id.bmenor)
+        imagenCarta = findViewById(R.id.imagenCarta)
+
+        bmayor.setOnClickListener(){
+            cartaRoll()
+        }
+        bmenor.setOnClickListener(){
+            cartaRoll()
+        }
+    }
+    private fun cartaRoll(){
+        for (item: Int in cartas) {
+            var aleatorio: Int
+            aleatorio = (Math.random() * 13).toInt()
+            carta_aleatoria = cartas[aleatorio]
+        }
+        imagenCarta.setImageResource(carta_aleatoria)
     }
 }
 

@@ -19,6 +19,7 @@
             android:layout_height="match_parent"
             android:src="@drawable/cf"
             android:scaleType="fitXY"
+            android:id="@+id/imagenCarta"
             />
 
 
@@ -27,6 +28,7 @@
             android:layout_width="150dp"
             android:layout_height="150dp"
             android:layout_marginLeft="130dp"
+            android:layout_marginTop="50dp"
             android:scaleType="fitCenter"
             android:alpha="0.5"
             android:src="@drawable/up" />
@@ -34,7 +36,7 @@
         <ImageButton
             android:layout_width="150dp"
             android:layout_height="150dp"
-            android:layout_marginTop="575dp"
+            android:layout_marginTop="450dp"
             android:layout_marginLeft="130dp"
             android:scaleType="fitCenter"
             android:alpha="0.5"
