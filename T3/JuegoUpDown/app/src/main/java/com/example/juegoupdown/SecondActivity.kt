@@ -13,7 +13,7 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.snackbar.Snackbar
 
-class SecondActivity : AppCompatActivity(){
+class SecondActivity : AppCompatActivity() {
 
     var puntos: Int = 0
     var carta_futura: Int = 0
@@ -70,46 +70,47 @@ class SecondActivity : AppCompatActivity(){
 
     }
 
-    private fun instancias(){
+    private fun instancias() {
         bmayor = findViewById(R.id.bmayor)
         bmenor = findViewById(R.id.bmenor)
         imagenCarta = findViewById(R.id.imagenCarta)
         textoPuntos = findViewById(R.id.textoPuntos)
 
-        bmayor.setOnClickListener(){
+        bmayor.setOnClickListener() {
             cartaRoll()
-            if (contador!! < aleatorio!!){
+            if (contador!! < aleatorio!!) {
                 puntos++
-                textoPuntos.setText("Puntos: "+ puntos.toString())
+                textoPuntos.setText("Puntos: " + puntos.toString())
                 contador = aleatorio
 
-            } else if (contador!! == aleatorio){
+            } else if (contador!! == aleatorio) {
 
-            } else if (contador!! > aleatorio!!){
+            } else if (contador!! > aleatorio!!) {
                 textoPuntos.setText("Has perdido con: " + puntos + " puntos.")
                 bmayor.isClickable = false
                 bmenor.isClickable = false
             }
         }
-        bmenor.setOnClickListener(){
+        bmenor.setOnClickListener() {
             cartaRoll()
-            if (contador!! > aleatorio!!){
+            if (contador!! > aleatorio!!) {
                 puntos++
-                textoPuntos.setText("Puntos: "+ puntos.toString())
+                textoPuntos.setText("Puntos: " + puntos.toString())
                 contador = aleatorio
-            } else if (contador!! == aleatorio){
+            } else if (contador!! == aleatorio) {
 
-            }else if (contador!! < aleatorio!!){
+            } else if (contador!! < aleatorio!!) {
                 textoPuntos.setText("Has perdido con: " + puntos + " puntos.")
                 bmayor.isClickable = false
                 bmenor.isClickable = false
             }
         }
     }
-    private fun cartaRoll(){
+
+    private fun cartaRoll() {
         aleatorio = (Math.random() * 13).toInt()
         carta_futura = cartas[aleatorio!!]
-        if (contador == null){
+        if (contador == null) {
             contador = aleatorio
         }
 
