@@ -17,7 +17,6 @@ class SecondActivity : AppCompatActivity(){
 
     var puntos: Int = 0
     var carta_futura: Int = 0
-    var carta_presente: Int = 0
     val cartas: Array<Int> = arrayOf(
         R.drawable.c1,
         R.drawable.c2,
@@ -36,8 +35,11 @@ class SecondActivity : AppCompatActivity(){
     lateinit var bmayor: ImageButton
     lateinit var bmenor: ImageButton
     lateinit var imagenCarta: ImageView
+    lateinit var textoPuntos: TextView
 
     lateinit var nombreRecuperado: String;
+    var contador: Int? = null;
+    var aleatorio: Int? = null;
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -72,22 +74,47 @@ class SecondActivity : AppCompatActivity(){
         bmayor = findViewById(R.id.bmayor)
         bmenor = findViewById(R.id.bmenor)
         imagenCarta = findViewById(R.id.imagenCarta)
+        textoPuntos = findViewById(R.id.textoPuntos)
 
         bmayor.setOnClickListener(){
             cartaRoll()
+            if (contador!! < aleatorio!!){
+                puntos++
+                textoPuntos.setText("Puntos: "+ puntos.toString())
+                contador = aleatorio
 
+            } else if (contador!! == aleatorio){
+
+            } else if (contador!! > aleatorio!!){
+                textoPuntos.setText("Has perdido con: " + puntos + " puntos.")
+                bmayor.isClickable = false
+                bmenor.isClickable = false
+            }
         }
         bmenor.setOnClickListener(){
             cartaRoll()
+            if (contador!! > aleatorio!!){
+                puntos++
+                textoPuntos.setText("Puntos: "+ puntos.toString())
+                contador = aleatorio
+            } else if (contador!! == aleatorio){
+
+            }else if (contador!! < aleatorio!!){
+                textoPuntos.setText("Has perdido con: " + puntos + " puntos.")
+                bmayor.isClickable = false
+                bmenor.isClickable = false
+            }
         }
     }
     private fun cartaRoll(){
-        var aleatorio: Int
         aleatorio = (Math.random() * 13).toInt()
-        carta_futura = cartas[aleatorio]
+        carta_futura = cartas[aleatorio!!]
+        if (contador == null){
+            contador = aleatorio
+        }
 
         imagenCarta.setImageResource(carta_futura)
-        carta_presente = carta_futura
+
     }
 }
 
