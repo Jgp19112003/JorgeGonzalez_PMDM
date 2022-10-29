@@ -15,8 +15,9 @@ import com.google.android.material.snackbar.Snackbar
 
 class SecondActivity : AppCompatActivity(){
 
-
-    var carta_aleatoria: Int = 0
+    var puntos: Int = 0
+    var carta_futura: Int = 0
+    var carta_presente: Int = 0
     val cartas: Array<Int> = arrayOf(
         R.drawable.c1,
         R.drawable.c2,
@@ -48,7 +49,6 @@ class SecondActivity : AppCompatActivity(){
 
     private fun iniciarUI() {
 
-
         val texto = nombreRecuperado;
         var notificacion =
             Snackbar.make(bmayor, "Bienvenido " + texto, Snackbar.LENGTH_INDEFINITE)
@@ -75,18 +75,19 @@ class SecondActivity : AppCompatActivity(){
 
         bmayor.setOnClickListener(){
             cartaRoll()
+
         }
         bmenor.setOnClickListener(){
             cartaRoll()
         }
     }
     private fun cartaRoll(){
-        for (item: Int in cartas) {
-            var aleatorio: Int
-            aleatorio = (Math.random() * 13).toInt()
-            carta_aleatoria = cartas[aleatorio]
-        }
-        imagenCarta.setImageResource(carta_aleatoria)
+        var aleatorio: Int
+        aleatorio = (Math.random() * 13).toInt()
+        carta_futura = cartas[aleatorio]
+
+        imagenCarta.setImageResource(carta_futura)
+        carta_presente = carta_futura
     }
 }
 
