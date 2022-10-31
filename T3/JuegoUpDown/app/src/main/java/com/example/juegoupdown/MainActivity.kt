@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         when (p0!!.id) {
             R.id.botonEmpezar -> {
                 if (textoNombre.text.isEmpty()) {
-                    Snackbar.make(p0!!, "Faltan datos", Snackbar.LENGTH_INDEFINITE).show()
+                    Snackbar.make(p0!!, "Por favor introduce nombre", Snackbar.LENGTH_INDEFINITE).show()
                 } else {
                     val texto = textoNombre.text.toString();
                     textoNombre.setText("")

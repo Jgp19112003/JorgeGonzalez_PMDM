@@ -83,12 +83,11 @@ class SecondActivity : AppCompatActivity() {
                 textoPuntos.setText("Puntos: " + puntos.toString())
                 contador = aleatorio
 
-            } else if (contador!! == aleatorio) {
-
             } else if (contador!! > aleatorio!!) {
                 textoPuntos.setText("Has perdido con: " + puntos + " puntos.")
-                bmayor.isClickable = false
-                bmenor.isClickable = false
+                desahabilitarBotones()
+                volverInicio()
+
             }
         }
         bmenor.setOnClickListener() {
@@ -97,12 +96,11 @@ class SecondActivity : AppCompatActivity() {
                 puntos++
                 textoPuntos.setText("Puntos: " + puntos.toString())
                 contador = aleatorio
-            } else if (contador!! == aleatorio) {
-
             } else if (contador!! < aleatorio!!) {
                 textoPuntos.setText("Has perdido con: " + puntos + " puntos.")
-                bmayor.isClickable = false
-                bmenor.isClickable = false
+                desahabilitarBotones()
+                volverInicio()
+
             }
         }
     }
@@ -116,6 +114,22 @@ class SecondActivity : AppCompatActivity() {
 
         imagenCarta.setImageResource(carta_futura)
 
+    }
+
+    private fun volverInicio() {
+        var notificacion =
+            Snackbar.make(bmayor, "¿Quieres volver al inicio? ", Snackbar.LENGTH_INDEFINITE)
+
+        notificacion.setAction("Si, volver al inicio") {
+            var intent: Intent = Intent(applicationContext, MainActivity::class.java)
+            startActivity(intent)
+        }
+        notificacion.show()
+    }
+
+    private fun desahabilitarBotones() {
+        bmayor.isClickable = false
+        bmenor.isClickable = false
     }
 }
 
