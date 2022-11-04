@@ -7,4 +7,7 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="primeros3">#9C9999</color>
+    <color name="operaciones">#229703</color>
+    <color name="nums">#494747</color>
 </resources>

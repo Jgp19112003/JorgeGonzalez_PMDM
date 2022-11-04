@@ -23,28 +23,80 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="0.5"
-            android:text="1" />
+            android:backgroundTint="#9C9999"
+            android:text="AC"
+            android:textColor="@color/black"
+            android:textSize="@dimen/letraBoton" />
 
         <Button
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="0.5"
-            android:text="2"
-
+            android:text="+/-"
+            android:textSize="@dimen/letraBoton"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/primeros3"
             />
 
         <Button
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="0.5"
-            android:text="1" />
+            android:text="%"
+            android:textSize="@dimen/letraBoton"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/primeros3"
+            />
 
         <Button
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="0.5"
-            android:text="2"
+            android:backgroundTint="#229703"
+            android:text="÷"
+            android:textSize="@dimen/letraBoton" />
 
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:backgroundTint="#494747"
+            android:text="7"
+            android:textSize="@dimen/letraBoton"
+            />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:text="8"
+            android:textSize="@dimen/letraBoton"
+            android:backgroundTint="@color/nums"
+            />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:text="9"
+            android:textSize="@dimen/letraBoton"
+            android:backgroundTint="@color/nums"
+            />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:text="X"
+            android:textSize="@dimen/letraBoton"
+            android:backgroundTint="@color/operaciones"
             />
 
 
@@ -58,63 +110,36 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="0.5"
-            android:text="1" />
-
-        <Button
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="0.5"
-            android:text="2"
-
+            android:text="4"
+            android:textSize="@dimen/letraBoton"
+            android:backgroundTint="@color/nums"
             />
 
         <Button
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="0.5"
-            android:text="1" />
-
-        <Button
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="0.5"
-            android:text="2"
-
-            />
-
-
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="120dp"
-        android:orientation="horizontal">
-
-        <Button
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="0.5"
-            android:text="1" />
-
-        <Button
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="0.5"
-            android:text="2"
-
+            android:text="5"
+            android:textSize="@dimen/letraBoton"
+            android:backgroundTint="@color/nums"
             />
 
         <Button
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="0.5"
-            android:text="1" />
+            android:text="6"
+            android:textSize="@dimen/letraBoton"
+            android:backgroundTint="@color/nums"
+            />
 
         <Button
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="0.5"
-            android:text="2"
-
+            android:text="-"
+            android:textSize="@dimen/letraBoton"
+            android:backgroundTint="@color/operaciones"
             />
 
 
@@ -128,28 +153,37 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="0.5"
-            android:text="1" />
+            android:text="1"
+            android:textSize="@dimen/letraBoton"
+            android:backgroundTint="@color/nums"
+            />
+
 
         <Button
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="0.5"
             android:text="2"
-
+            android:textSize="@dimen/letraBoton"
+            android:backgroundTint="@color/nums"
             />
 
         <Button
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="0.5"
-            android:text="1" />
+            android:text="3"
+            android:textSize="@dimen/letraBoton"
+            android:backgroundTint="@color/nums"
+            />
 
         <Button
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="0.5"
-            android:text="2"
-
+            android:text="+"
+            android:textSize="@dimen/letraBoton"
+            android:backgroundTint="@color/operaciones"
             />
 
 
@@ -160,31 +194,30 @@
         android:orientation="horizontal">
 
         <Button
-            android:layout_width="0dp"
+            android:layout_width="107dp"
             android:layout_height="match_parent"
             android:layout_weight="0.5"
-            android:text="1" />
-
-        <Button
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="0.5"
-            android:text="2"
-
+            android:text="0"
+            android:textSize="@dimen/letraBoton"
+            android:backgroundTint="@color/nums"
             />
 
         <Button
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="0.5"
-            android:text="1" />
+            android:text="."
+            android:textSize="@dimen/letraBoton"
+            android:backgroundTint="@color/nums"
+            />
 
         <Button
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="0.5"
-            android:text="2"
-
+            android:text="="
+            android:textSize="@dimen/letraBoton"
+            android:backgroundTint="@color/operaciones"
             />
 
 
