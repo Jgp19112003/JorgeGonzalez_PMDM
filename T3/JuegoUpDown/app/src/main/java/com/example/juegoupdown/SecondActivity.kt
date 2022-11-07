@@ -92,6 +92,8 @@ class SecondActivity : AppCompatActivity() {
 
             }
         }
+
+
         bmenor.setOnClickListener() {
             cartaRoll()
             if (contador!! > aleatorio!!) {

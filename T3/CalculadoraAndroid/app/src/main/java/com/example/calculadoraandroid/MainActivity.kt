@@ -12,11 +12,10 @@ import kotlin.math.sqrt
 class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     private lateinit var binding: ActivityMainBinding
-    private val tipoOperacion: Int? = null
+    private var tipoOperacion: Int? = null
     private var resultado: Double? = null
     private var op2: Double? = null
     private var op1: Double? = null
-
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -55,9 +54,10 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     private fun acciones() {
 
     }
-    private fun factorial(n: Double): Double{
+
+    private fun factorial(n: Double): Double {
         var dato: Double = 1.0
-        for (i in 1..n.toInt()){
+        for (i in 1..n.toInt()) {
             resultado = resultado?.times(i)
         }
         return resultado!!
@@ -125,8 +125,41 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                     }
                 }
             }
-            R.id.b0 ->{
-                    binding.textoOperacion!!.setText(binding.textoOperacion?.text!!.append(binding.b0?.text));
+            R.id.b0 -> {
+                binding.textoOperacion!!.setText(binding.textoOperacion?.text!!.append(binding.b0?.text));
+            }
+            R.id.b1 -> {
+                binding.textoOperacion!!.setText(binding.textoOperacion?.text!!.append(binding.b1?.text));
+            }
+            R.id.b2 -> {
+                binding.textoOperacion!!.setText(binding.textoOperacion?.text!!.append(binding.b2?.text));
+            }
+            R.id.b3 -> {
+                binding.textoOperacion!!.setText(binding.textoOperacion?.text!!.append(binding.b3?.text));
+            }
+            R.id.b4 -> {
+                binding.textoOperacion!!.setText(binding.textoOperacion?.text!!.append(binding.b4?.text));
+            }
+            R.id.b5 -> {
+                binding.textoOperacion!!.setText(binding.textoOperacion?.text!!.append(binding.b5?.text));
+            }
+            R.id.b6 -> {
+                binding.textoOperacion!!.setText(binding.textoOperacion?.text!!.append(binding.b6?.text));
+            }
+            R.id.b7 -> {
+                binding.textoOperacion!!.setText(binding.textoOperacion?.text!!.append(binding.b7?.text));
+            }
+            R.id.b8 -> {
+                binding.textoOperacion!!.setText(binding.textoOperacion?.text!!.append(binding.b8?.text));
+            }
+            R.id.b9 -> {
+                binding.textoOperacion!!.setText(binding.textoOperacion?.text!!.append(binding.b9?.text));
+            }
+            R.id.bSuma -> {
+
+                    op1 = (binding.textoOperacion?.text).toString().toDouble();
+                    tipoOperacion = 0;
+                    binding.textoOperacion!!.setText("");
             }
         }
     }

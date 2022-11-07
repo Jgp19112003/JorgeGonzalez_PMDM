@@ -11,7 +11,7 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="120dp"
-        android:text="Operaciones"
+        android:text=""
         android:background="@color/white"
         android:id="@+id/textoOperacion"
       />
