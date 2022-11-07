@@ -47,6 +47,7 @@ class SecondActivity : AppCompatActivity() {
         instancias()
         recuperarDatos()
         iniciarUI()
+        desahabilitarBotones()
     }
 
     private fun iniciarUI() {
@@ -59,6 +60,7 @@ class SecondActivity : AppCompatActivity() {
             // pasar de activity
             // INTENT -> acciones
             cartaRoll()
+            habilitarBotones()
         }
         notificacion.show()
     }
@@ -130,6 +132,10 @@ class SecondActivity : AppCompatActivity() {
     private fun desahabilitarBotones() {
         bmayor.isClickable = false
         bmenor.isClickable = false
+    }
+    private fun habilitarBotones() {
+        bmayor.isClickable = true
+        bmenor.isClickable = true
     }
 }
 
