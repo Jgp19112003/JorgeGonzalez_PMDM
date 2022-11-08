@@ -1,5 +1,6 @@
 package com.example.calculadoraandroid
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
@@ -49,6 +50,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         binding.bPunto?.setOnClickListener(this)
         binding.bPunto?.setOnClickListener(this)
         binding.textoOperacion?.setOnClickListener(this)
+        binding.bFactorial?.setOnClickListener(this)
+        binding.bRaiz?.setOnClickListener(this)
     }
 
     private fun acciones() {
@@ -63,6 +66,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         return resultado!!
     }
 
+    @SuppressLint("SetTextI18n")
     override fun onClick(p0: View?) {
         when (p0!!.id) {
             R.id.bIgual -> {
@@ -155,11 +159,46 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             R.id.b9 -> {
                 binding.textoOperacion!!.setText(binding.textoOperacion?.text!!.append(binding.b9?.text));
             }
+            R.id.bAC -> {
+                binding.textoOperacion?.setText("");
+            }
             R.id.bSuma -> {
 
-                    op1 = (binding.textoOperacion?.text).toString().toDouble();
-                    tipoOperacion = 0;
-                    binding.textoOperacion!!.setText("");
+                op1 = (binding.textoOperacion?.text).toString().toDouble();
+                tipoOperacion = 0;
+                binding.textoOperacion!!.setText("");
+            }
+            R.id.bResta -> {
+                op1 = (binding.textoOperacion?.text).toString().toDouble();
+                tipoOperacion = 1;
+                binding.textoOperacion?.setText("");
+            }
+            R.id.bMultiplicacion -> {
+                op1 = (binding.textoOperacion?.text).toString().toDouble();
+                tipoOperacion = 2;
+                binding.textoOperacion?.setText("");
+            }
+            R.id.bDiv -> {
+                op1 = (binding.textoOperacion?.text).toString().toDouble();
+                tipoOperacion = 3;
+                binding.textoOperacion?.setText("");
+            }
+            R.id.bPorcentaje -> {
+                op1 = (binding.textoOperacion?.text).toString().toDouble();
+                binding.textoOperacion!!.setText(binding.textoOperacion!!.text.append(binding.bPorcentaje?.text));
+                binding.textoOperacion?.setText("");
+                tipoOperacion = 4;
+            }
+
+            R.id.bFactorial -> {
+                op1 = (binding.textoOperacion?.text).toString().toDouble();
+                binding.textoOperacion!!.setText("!" + binding.textoOperacion!!.text);
+                tipoOperacion = 5;
+            }
+            R.id.bRaiz -> {
+                op1 = (binding.textoOperacion?.text).toString().toDouble();
+                binding.textoOperacion?.setText("sin()" + binding.textoOperacion?.getText());
+                tipoOperacion = 6;
             }
         }
     }

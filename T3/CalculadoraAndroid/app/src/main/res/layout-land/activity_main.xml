@@ -24,7 +24,8 @@
             android:layout_weight="0.5"
             android:text="X!"
             android:backgroundTint="@color/nums"
-            android:textSize="25dp" />
+            android:textSize="25dp"
+            android:id="@+id/bFactorial"/>
 
         <Button
             android:layout_width="0dp"
@@ -76,7 +77,8 @@
             android:layout_weight="0.5"
             android:text="√ "
             android:backgroundTint="@color/nums"
-            android:textSize="25dp" />
+            android:textSize="25dp"
+            android:id="@+id/bRaiz"/>
 
         <Button
             android:layout_width="0dp"
