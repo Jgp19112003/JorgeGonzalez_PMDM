@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     private fun instancias() {
         binding.b0.setOnClickListener(this)
-        binding.b1?.setOnClickListener(this)
+        binding.b1.setOnClickListener(this)
         binding.b2.setOnClickListener(this)
         binding.b3.setOnClickListener(this)
         binding.b4.setOnClickListener(this)
@@ -129,7 +129,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 binding.textoOperacion.text = binding.textoOperacion.text!!.append(binding.b0.text);
             }
             R.id.b1 -> {
-                binding.textoOperacion.text = binding.textoOperacion.text!!.append(binding.b1?.text);
+                binding.textoOperacion.text = binding.textoOperacion.text!!.append(binding.b1.text);
             }
             R.id.b2 -> {
                 binding.textoOperacion.text = binding.textoOperacion.text!!.append(binding.b2.text);
