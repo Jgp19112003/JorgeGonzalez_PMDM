@@ -17,7 +17,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         val view: View = binding.root;
 
         setContentView(view)
-        contador = savedInstanceState?.getInt("contador")?:0
+        contador = savedInstanceState?.getInt("contador",0)?:0
+        binding.textoNum.text = contador.toString()
         acciones()
     }
 
