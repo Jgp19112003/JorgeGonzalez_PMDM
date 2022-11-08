@@ -35,7 +35,7 @@
             android:layout_marginTop="50dp"
             android:background="@android:color/transparent"
             android:scaleType="fitCenter"
-            android:src="@drawable/up" />
+            android:src="@drawable/manejo_boton_up" />
 
         <ImageButton
             android:id="@+id/bmenor"
@@ -45,7 +45,7 @@
             android:layout_marginTop="450dp"
             android:background="@android:color/transparent"
             android:scaleType="fitCenter"
-            android:src="@drawable/down" />
+            android:src="@drawable/manejo_boton_down" />
     </FrameLayout>
 
 </LinearLayout>

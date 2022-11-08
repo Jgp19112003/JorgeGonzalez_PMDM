@@ -107,11 +107,6 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                         binding.textoOperacion?.setText(resultado.toString());
                     }
 
-                    6 -> {
-                        resultado = sin(op1!!);
-                        binding.textoOperacion?.setText(resultado.toString());
-                    }
-
                     7 -> {
                         resultado = sqrt(op1!!);
                         binding.textoOperacion?.setText(resultado.toString());
@@ -162,6 +157,15 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             R.id.bAC -> {
                 binding.textoOperacion?.setText("");
             }
+            R.id.bNegativo -> {
+                binding.textoOperacion?.setText("-" + binding.textoOperacion?.text);
+            }
+            R.id.bPunto -> {
+                binding.textoOperacion?.setText(binding.textoOperacion!!.text.append(binding.bPunto?.text));
+            }
+            R.id.bE -> {
+                binding.textoOperacion?.setText(binding.textoOperacion?.text!!.append("2.7182"));
+            }
             R.id.bSuma -> {
 
                 op1 = (binding.textoOperacion?.text).toString().toDouble();
@@ -185,7 +189,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             }
             R.id.bPorcentaje -> {
                 op1 = (binding.textoOperacion?.text).toString().toDouble();
-                binding.textoOperacion!!.setText(binding.textoOperacion!!.text.append(binding.bPorcentaje?.text));
+                binding.textoOperacion!!.text = binding.textoOperacion!!.text.append(binding.bPorcentaje?.text);
                 binding.textoOperacion?.setText("");
                 tipoOperacion = 4;
             }
@@ -195,10 +199,21 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 binding.textoOperacion!!.setText("!" + binding.textoOperacion!!.text);
                 tipoOperacion = 5;
             }
+
             R.id.bRaiz -> {
                 op1 = (binding.textoOperacion?.text).toString().toDouble();
-                binding.textoOperacion?.setText("sin()" + binding.textoOperacion?.getText());
-                tipoOperacion = 6;
+                binding.textoOperacion?.setText("√" + binding.textoOperacion?.text);
+                tipoOperacion = 7;
+            }
+            R.id.bExponente -> {
+                op1 = (binding.textoOperacion?.text).toString().toDouble();
+                tipoOperacion = 8;
+                binding.textoOperacion?.setText("");
+            }
+            R.id.bLog -> {
+                op1 = (binding.textoOperacion?.text).toString().toDouble();
+                binding.textoOperacion?.setText("ln()" + binding.textoOperacion?.text);
+                tipoOperacion = 9;
             }
         }
     }
