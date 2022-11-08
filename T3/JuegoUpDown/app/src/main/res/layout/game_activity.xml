@@ -33,7 +33,7 @@
             android:layout_height="150dp"
             android:layout_marginLeft="130dp"
             android:layout_marginTop="50dp"
-            android:alpha="0.5"
+            android:background="@android:color/transparent"
             android:scaleType="fitCenter"
             android:src="@drawable/up" />
 
@@ -43,7 +43,7 @@
             android:layout_height="150dp"
             android:layout_marginLeft="130dp"
             android:layout_marginTop="450dp"
-            android:alpha="0.5"
+            android:background="@android:color/transparent"
             android:scaleType="fitCenter"
             android:src="@drawable/down" />
     </FrameLayout>
