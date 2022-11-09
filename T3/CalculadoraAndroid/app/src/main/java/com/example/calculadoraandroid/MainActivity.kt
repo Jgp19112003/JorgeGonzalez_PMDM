@@ -60,11 +60,10 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     }
 
-    private fun factorial(n: Double): Double {
-        for (i in 1..n.toInt()) {
-            resultado = resultado?.times(i)
-        }
-        return resultado!!
+    fun factorial(num: Double){
+        var resultado = 1
+        for (i in 2..num.toInt()) resultado *= i
+        binding.textoOperacion.setText(resultado.toString());
     }
 
 
@@ -104,8 +103,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                     }
 
                     5 -> {
-                        resultado = factorial(op1!!);
-                        binding.textoOperacion.setText(resultado.toString());
+                        factorial(op1!!);
                     }
 
                     7 -> {
@@ -165,7 +163,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 binding.textoOperacion.text = binding.textoOperacion!!.text.append(binding.bPunto?.text);
             }
             R.id.bE -> {
-                binding.textoOperacion.setText(binding.textoOperacion.text!!.append("2.7182"));
+                binding.textoOperacion.setText(binding.textoOperacion.text!!.append("2.71828"));
             }
             R.id.bSuma -> {
 
