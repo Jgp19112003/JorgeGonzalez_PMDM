@@ -6,16 +6,16 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".MainActivity"
+
     >
 
     <EditText
-        android:layout_width="match_parent"
-        android:layout_height="120dp"
-        android:text=""
-        android:textSize="70dp"
-        android:background="@color/white"
         android:id="@+id/textoOperacion"
-      />
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:background="@color/white"
+        android:text=""
+        android:textSize="70dp" />
 
 
     <LinearLayout
