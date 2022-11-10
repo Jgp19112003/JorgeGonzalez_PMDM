@@ -20,4 +20,21 @@
         android:id="@+id/spinnerComplejo"
         />
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Agregar Pais" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ver Detalles"
+        android:id="@+id/boton_detalles"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/espania"
+        android:id="@+id/imagenEscudo"/>
+
 </LinearLayout>
