@@ -7,13 +7,13 @@
     >
 
 
-
     <EditText
         android:id="@+id/textoOperacion"
         android:layout_width="match_parent"
         android:layout_height="78dp"
         android:background="@color/white"
         android:text=""
+        android:textAlignment="textEnd"
         android:textSize="70dp" />
 
     <LinearLayout

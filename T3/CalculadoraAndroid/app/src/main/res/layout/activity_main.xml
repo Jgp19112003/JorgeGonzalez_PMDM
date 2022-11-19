@@ -15,6 +15,7 @@
         android:layout_height="72dp"
         android:background="@color/white"
         android:text=""
+        android:textAlignment="textEnd"
         android:textSize="70dp" />
 
 
