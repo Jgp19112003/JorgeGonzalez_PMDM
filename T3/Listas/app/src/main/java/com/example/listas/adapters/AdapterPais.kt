@@ -32,11 +32,11 @@ class AdapterPais(private var lista: ArrayList<Pais>, private var context: Conte
 
         var textoNombre: TextView = view.findViewById(R.id.texto_pais)
         var textoEstrella: TextView = view.findViewById(R.id.texto_estrella)
-        var escudoImagen: TextView = view.findViewById(R.id.imagen_pais)
+        var escudoImagen: ImageView = view.findViewById(R.id.imagen_pais)
 
         textoNombre.setText(pais.nombre)
         textoEstrella.setText(pais.estrella)
-        escudoImagen.setText(pais.imagen)
+        escudoImagen.setImageResource(pais.imagen)
 
         return view
 

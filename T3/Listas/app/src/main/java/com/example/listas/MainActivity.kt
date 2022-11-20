@@ -9,7 +9,7 @@ import com.example.listas.databinding.ActivityMainBinding
 import com.example.spinner.modelo.Pais
 import com.google.android.material.snackbar.Snackbar
 
-class MainActivity : AppCompatActivity() {
+class   MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
     private lateinit var arrayPaises: ArrayList<Pais>
