@@ -33,11 +33,6 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         when(p0!!.id){
             R.id.botonIniciar -> {
                 if (!binding.editTextNombre.text.isEmpty() && !binding.editTextApellido.text.isEmpty()) {
-                    Snackbar.make(
-                        binding.botonIniciar,
-                        "Por favor introduce nombre y apellido",
-                        Snackbar.LENGTH_SHORT
-                    ).show()
                     val textoNombre = binding.editTextNombre.text.toString();
                     val textoApellido = binding.editTextApellido.text.toString();
                     binding.editTextNombre.setText("")
@@ -53,7 +48,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                     intent.putExtras(datos)
                     startActivity(intent)
                 }else {
-                    Toast.makeText(applicationContext,"Ingrese nombre y apellido",Toast.LENGTH_SHORT).show()
+                    //oast.makeText(applicationContext,"Ingrese nombre y apellido porfavor",Toast.LENGTH_SHORT).show()
+                    Snackbar.make(p0!!, "Ingrese nombre y apellido porfavor", Snackbar.LENGTH_SHORT).show()
                 }
             }
         }

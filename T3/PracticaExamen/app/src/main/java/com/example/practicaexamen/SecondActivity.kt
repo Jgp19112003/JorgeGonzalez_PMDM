@@ -23,6 +23,7 @@ class SecondActivity : AppCompatActivity()  {
         rellenarSpinnerPersonalizado()
     }
 
+
     private fun instancias() {
         arraySpinner = ArrayList()
         adaptadorPersonalizado = AdaptadorPersonalizado(arraySpinner,applicationContext)

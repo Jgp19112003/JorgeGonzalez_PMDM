@@ -8,15 +8,50 @@
         android:layout_width="match_parent"
         android:layout_height="160dp"
         android:id="@+id/spinnerAsignaturas"
-        android:layout_marginBottom="20dp"
         />
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DI"
+        android:textSize="20dp"/>
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PMDM"
+        android:textSize="20dp"/>
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PSP"
+        android:textSize="20dp"/>
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="EIE"
+        android:textSize="20dp"/>
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="AD"
+        android:textSize="20dp"/>
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SGE"
+        android:textSize="20dp"/>
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ING"
+        android:textSize="20dp"/>
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_gravity="center"
-        android:layout_marginTop="50dp">
+        android:layout_marginTop="20dp">
 
     <EditText
         android:layout_width="wrap_content"
@@ -36,7 +71,7 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="250dp"
+        android:layout_marginTop="20dp"
         android:text="Calcular" />
 
 </LinearLayout>
