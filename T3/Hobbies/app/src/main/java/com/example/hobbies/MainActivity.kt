@@ -22,6 +22,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         binding.botonHobbies.setOnClickListener(this)
     }
 
+
     override fun onClick(p0: View?) {
         when (p0?.id) {
             R.id.botonHobbies -> {
