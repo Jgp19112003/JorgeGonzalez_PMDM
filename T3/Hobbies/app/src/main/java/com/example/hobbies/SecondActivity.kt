@@ -54,7 +54,6 @@ class SecondActivity : AppCompatActivity(),AdapterView.OnItemSelectedListener{
             binding.textoNombreSeleccionado.setText(elemento.nombre)
             binding.textoDescripcionSeleccionado.setText(elemento.descripcion)
             binding.frameSeleccionado.isVisible = true
-            println("ENTRE")
         }
     }
 
