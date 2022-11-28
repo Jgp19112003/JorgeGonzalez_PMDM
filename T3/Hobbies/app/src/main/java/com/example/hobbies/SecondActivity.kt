@@ -6,11 +6,12 @@ import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.get
+import androidx.core.view.isVisible
 import com.example.hobbies.adapters.AdapterLista
 import com.example.hobbies.databinding.SecondActivityBinding
 import com.example.hobbies.model.Elemento
 
-class SecondActivity : AppCompatActivity(),AdapterView.OnItemSelectedListener, View.OnClickListener{
+class SecondActivity : AppCompatActivity(),AdapterView.OnItemSelectedListener{
 
     private lateinit var binding: SecondActivityBinding
     lateinit var arraySpinner: ArrayList<String>
@@ -31,6 +32,7 @@ class SecondActivity : AppCompatActivity(),AdapterView.OnItemSelectedListener, V
     private fun asociarDatos() {
         binding.spinnerHobbies.adapter = adaptadorSencillo
         binding.listaElementos.adapter = adaptadorElementos
+        binding.frameSeleccionado.isVisible = false
     }
 
     private fun instancias() {
@@ -47,7 +49,11 @@ class SecondActivity : AppCompatActivity(),AdapterView.OnItemSelectedListener, V
         binding.spinnerHobbies.onItemSelectedListener = this
 
         binding.listaElementos.setOnItemClickListener { adapterView, view, i, l ->
-
+            var elemento: Elemento = adaptadorElementos.getItem(i) as Elemento
+            binding.imagenElementoSeleccionado.setImageResource(elemento.imagen)
+            binding.textoNombreSeleccionado.setText(elemento.nombre)
+            binding.textoDescripcionSeleccionado.setText(elemento.descripcion)
+            binding.frameSeleccionado.isVisible = true
         }
     }
 
@@ -88,9 +94,5 @@ class SecondActivity : AppCompatActivity(),AdapterView.OnItemSelectedListener, V
 
     override fun onNothingSelected(p0: AdapterView<*>?) {
 
-    }
-
-    override fun onClick(p0: View?) {
-        TODO("Not yet implemented")
     }
 }
