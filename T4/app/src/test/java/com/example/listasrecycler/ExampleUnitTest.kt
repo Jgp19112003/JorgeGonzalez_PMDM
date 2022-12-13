@@ -1,4 +1,4 @@
-package com.example.listarecycler
+package com.example.listasrecycler
 
 import org.junit.Test
 
