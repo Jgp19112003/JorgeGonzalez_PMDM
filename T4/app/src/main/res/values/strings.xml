@@ -1,3 +1,27 @@
 <resources>
-    <string name="app_name">ListasRecycler</string>
+    <string name="app_name">Coches</string>
+    <string-array name="marcas">
+        <item>Mercedes</item>
+        <item>Bentley</item>
+        <item>Jaguar</item>
+        <item>Ford</item>
+        <item>Nissan</item>
+        <item>Porche</item>
+        <item>Lexus</item>
+        <item>Ferrari</item>
+        <item>McLaren</item>
+        <item>Toyota</item>
+    </string-array>
+    <string-array name="precios">
+        <item>Mercedes</item>
+        <item>Bentley</item>
+        <item>Jaguar</item>
+        <item>Ford</item>
+        <item>Nissan</item>
+        <item>Porche</item>
+        <item>Lexus</item>
+        <item>Ferrari</item>
+        <item>McLaren</item>
+        <item>Toyota</item>
+    </string-array>
 </resources>

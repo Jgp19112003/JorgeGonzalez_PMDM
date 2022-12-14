@@ -12,5 +12,5 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-rootProject.name = "ListasRecycler"
+rootProject.name = "Coches"
 include ':app'
