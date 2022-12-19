@@ -30,6 +30,11 @@ class AdapterCoche(var context: Context, var lista: ArrayList<Coche>) :
         }
     }
 
+    fun cambiarLista(listaNueva: ArrayList<Coche>){
+        this.lista = listaNueva
+        notifyDataSetChanged()
+    }
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyHolder {
         val view: View = LayoutInflater.from(context).inflate(R.layout.item_recycler, parent, false)
         return MyHolder(view)
@@ -45,4 +50,5 @@ class AdapterCoche(var context: Context, var lista: ArrayList<Coche>) :
     override fun getItemCount(): Int {
         return lista.size
     }
+
 }
