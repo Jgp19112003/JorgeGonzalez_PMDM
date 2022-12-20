@@ -16,9 +16,9 @@ import com.example.coches.model.Coche
 
 class AdapterCoche(var context: Context, var lista: ArrayList<Coche>) :
     RecyclerView.Adapter<AdapterCoche.MyHolder>() {
+    var funcionComunicar: ((coche: Coche) -> Unit)? = null
 
     inner class MyHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-
         var imagen: ImageView
         var modelo: TextView
         var boton: Button
@@ -44,7 +44,7 @@ class AdapterCoche(var context: Context, var lista: ArrayList<Coche>) :
         val coche = lista.get(position)
         holder.modelo.text = coche.modelo
         holder.imagen.setImageResource(coche.imagen)
-
+        funcionComunicar?.invoke(coche)
     }
 
     override fun getItemCount(): Int {

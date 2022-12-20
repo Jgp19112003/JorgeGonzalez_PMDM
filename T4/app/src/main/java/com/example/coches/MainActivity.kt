@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.coches.adapters.AdapterCoche
 import com.example.coches.databinding.ActivityMainBinding
 import com.example.coches.model.Coche
+import com.google.android.material.snackbar.Snackbar
 
 
 class MainActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener{
@@ -59,6 +60,7 @@ class MainActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener{
         coches.add(Coche("Porche","Taycan",350,250000,"Deportivo", R.drawable.taycan))
 
         adapterCoche = AdapterCoche(this, coches)
+        adapterCoche.funcionComunicar = {Snackbar.make(binding.root, it.precio.toString(), Snackbar.LENGTH_SHORT).show()}
         binding.recycler.adapter = adapterCoche;
         binding.recycler.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL,false)
         binding.spinnerMarca.adapter = ArrayAdapter.createFromResource(applicationContext, R.array.marcas ,android.R.layout.simple_spinner_item)
