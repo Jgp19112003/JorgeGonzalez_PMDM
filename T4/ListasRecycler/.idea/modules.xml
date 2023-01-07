@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/ListasRecycler.iml" filepath="$PROJECT_DIR$/.idea/ListasRecycler.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ListaRecycler.iml" filepath="$PROJECT_DIR$/.idea/modules/ListaRecycler.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/ListaRecycler.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/ListaRecycler.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/ListaRecycler.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/ListaRecycler.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/ListaRecycler.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/ListaRecycler.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/ListaRecycler.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/ListaRecycler.app.unitTest.iml" />
     </modules>
   </component>
 </project>
