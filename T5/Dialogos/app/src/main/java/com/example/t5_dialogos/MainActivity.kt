@@ -6,8 +6,9 @@ import android.os.Bundle
 import android.view.View
 import com.example.t5_dialogos.databinding.ActivityMainBinding
 import com.example.t5_dialogos.dialagos.DialogoConfirmacion
+import com.example.t5_dialogos.dialagos.DialogoLista
 
-class MainActivity : AppCompatActivity(), View.OnClickListener, DialogoConfirmacion.OnDialogClickListener {
+class MainActivity : AppCompatActivity(), View.OnClickListener, DialogoConfirmacion.OnDialogClickListener, DialogoLista.OnDialogSelection {
     private lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,14 +30,14 @@ class MainActivity : AppCompatActivity(), View.OnClickListener, DialogoConfirmac
             binding.botonConfirmacion.id -> {
                 val dialogoConfirmacion = DialogoConfirmacion()
                 dialogoConfirmacion.show(supportFragmentManager,"")
-
-
             }
             binding.botonLista.id -> {
-
+                val dialogoLista = DialogoLista()
+                dialogoLista.show(supportFragmentManager,"")
             }
             binding.botonListamult.id -> {
-
+                val dialogoLista = DialogoLista()
+                dialogoLista.show(supportFragmentManager,"")
             }
             binding.botonListasimpl.id -> {
 
@@ -49,5 +50,9 @@ class MainActivity : AppCompatActivity(), View.OnClickListener, DialogoConfirmac
 
     override fun onDialogClickListener(texto: String) {
         binding.textoConfirmacion.text = texto
+    }
+
+    override fun onDialogSelection(posicion: String) {
+        binding.textoLista.text = posicion
     }
 }
