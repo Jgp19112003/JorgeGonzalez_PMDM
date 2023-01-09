@@ -1,0 +1,34 @@
+R_DEF: Internal format may change without notice
+local
+color black
+color purple_200
+color purple_500
+color purple_700
+color teal_200
+color teal_700
+color white
+drawable ic_launcher_background
+drawable ic_launcher_foreground
+id boton_confirmacion
+id boton_lista
+id boton_listamult
+id boton_listasimpl
+id boton_personalizado
+id linearLayout
+id linearLayout2
+id linearLayout3
+id linearLayout4
+id textoDialogos
+id texto_confirmacion
+id texto_lista
+id texto_listamult
+id texto_listasimpl
+id texto_personalizado
+layout activity_main
+mipmap ic_launcher
+mipmap ic_launcher_round
+string app_name
+string titulo_dialogo
+style Theme.T5_Dialogos
+xml backup_rules
+xml data_extraction_rules
