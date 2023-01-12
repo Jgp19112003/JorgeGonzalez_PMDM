@@ -36,6 +36,7 @@ class DialogoPersonalizado : DialogFragment(){
         botonLogin.setOnClickListener{
             Log.v("dialogo","Boton dialogo pulsado")
         }
+        // TODO Comunicar usuario(nombre, pass, recordarContraseña)
     }
 
     override fun onResume() {
@@ -50,6 +51,7 @@ class DialogoPersonalizado : DialogFragment(){
 
     override fun onStart() {
         instancias()
+        acciones()
         super.onStart()
     }
 }
