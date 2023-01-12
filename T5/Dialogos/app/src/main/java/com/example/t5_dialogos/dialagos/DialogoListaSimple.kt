@@ -9,10 +9,10 @@ import androidx.fragment.app.DialogFragment
 
 class DialogoListaSimple : DialogFragment() {
 
-    private lateinit var listener: DialogoLista.OnDialogSelection
+    private lateinit var listener: OnDialogSelectionSimple
     override fun onAttach(context: Context) {
         super.onAttach(context)
-        listener = context as DialogoLista.OnDialogSelection
+        listener = context as OnDialogSelectionSimple
     }
 
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
@@ -22,7 +22,7 @@ class DialogoListaSimple : DialogFragment() {
         builder.setTitle("Titulo de lista")
 
         //builder.setMessage("Mensaje de la lista")
-        builder.setSingleChoiceItems(elementos,0,DialogInterface.OnClickListener { dialogInterface, i -> listener.onDialogSelection(elementos.get(i).toString())
+        builder.setSingleChoiceItems(elementos,0,DialogInterface.OnClickListener { dialogInterface, i -> listener.onDialogSelectionSimple(elementos.get(i).toString())
             // i --> posicion pulsada
         })
         builder.setPositiveButton("Aceptar",{ dialogInterface, i -> })
@@ -32,5 +32,10 @@ class DialogoListaSimple : DialogFragment() {
 
         return builder.create();
     }
+
+    interface OnDialogSelectionSimple{
+        fun onDialogSelectionSimple(elemento: String?)
+    }
+
 
 }

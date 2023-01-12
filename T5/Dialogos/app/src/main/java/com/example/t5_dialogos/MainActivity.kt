@@ -5,10 +5,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import com.example.t5_dialogos.databinding.ActivityMainBinding
-import com.example.t5_dialogos.dialagos.DialogoConfirmacion
-import com.example.t5_dialogos.dialagos.DialogoLista
+import com.example.t5_dialogos.dialagos.*
 
-class MainActivity : AppCompatActivity(), View.OnClickListener, DialogoConfirmacion.OnDialogClickListener, DialogoLista.OnDialogSelection {
+class MainActivity : AppCompatActivity(), View.OnClickListener, DialogoConfirmacion.OnDialogClickListener, DialogoLista.OnDialogSelection, DialogoListaSimple.OnDialogSelectionSimple, DialogoMultiple.OnDialogSelectionMult{
     private lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,6 +22,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener, DialogoConfirmac
         binding.botonListamult.setOnClickListener(this)
         binding.botonListasimpl.setOnClickListener(this)
         binding.botonPersonalizado.setOnClickListener(this)
+        binding.botonPersonalizado.setOnClickListener(this)
     }
 
     override fun onClick(p0: View?) {
@@ -35,15 +35,17 @@ class MainActivity : AppCompatActivity(), View.OnClickListener, DialogoConfirmac
                 val dialogoLista = DialogoLista()
                 dialogoLista.show(supportFragmentManager,"")
             }
-            binding.botonListamult.id -> {
-                val dialogoLista = DialogoLista()
-                dialogoLista.show(supportFragmentManager,"")
-            }
             binding.botonListasimpl.id -> {
-
+                val dialogoListaSimple = DialogoListaSimple()
+                dialogoListaSimple.show(supportFragmentManager,"")
+            }
+            binding.botonListamult.id -> {
+                val dialogoListaMult = DialogoMultiple()
+                dialogoListaMult.show(supportFragmentManager,"")
             }
             binding.botonPersonalizado.id -> {
-
+                val dialogoPersonalizado = DialogoPersonalizado()
+                dialogoPersonalizado.show(supportFragmentManager,"")
             }
         }
     }
@@ -54,5 +56,13 @@ class MainActivity : AppCompatActivity(), View.OnClickListener, DialogoConfirmac
 
     override fun onDialogSelection(posicion: String) {
         binding.textoLista.text = posicion
+    }
+
+    override fun onDialogSelectionSimple(elemento: String?) {
+        binding.textoListasimpl.text = elemento?:"Sin comunicacion"
+    }
+
+    override fun onDialogSelectionMult(lista: ArrayList<String>) {
+        binding.textoListamult.text = lista.size.toString()
     }
 }
