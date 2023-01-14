@@ -2,6 +2,7 @@ package com.example.t5_dialogos.dialagos
 
 import android.app.Dialog
 import android.content.Context
+import android.content.DialogInterface
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -12,6 +13,7 @@ import android.widget.EditText
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.DialogFragment
 import com.example.t5_dialogos.R
+import com.example.t5_dialogos.dialagos.model.Usuario
 
 class DialogoPersonalizado : DialogFragment(){
 
@@ -20,8 +22,11 @@ class DialogoPersonalizado : DialogFragment(){
     private lateinit var editNombre: EditText
     private lateinit var editPass: EditText
     private lateinit var checkRecordar: CheckBox
-    override fun onAttach(context: Context) {
+
+    private lateinit var listener: OnDialogLogin
+        override fun onAttach(context: Context) {
         super.onAttach(context)
+        listener = context as OnDialogLogin
     }
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
 
@@ -35,12 +40,16 @@ class DialogoPersonalizado : DialogFragment(){
     fun acciones(){
         botonLogin.setOnClickListener{
             Log.v("dialogo","Boton dialogo pulsado")
+            var usuario: Usuario = (Usuario(editNombre.text.toString(),editPass.text.toString(),checkRecordar.isChecked))
+            listener.onDialogLogin(usuario)
+            dismiss()
         }
         // TODO Comunicar usuario(nombre, pass, recordarContraseña)
     }
 
     override fun onResume() {
         super.onResume()
+        acciones()
     }
     fun instancias(){
         botonLogin = vista.findViewById(R.id.botonLogin)
@@ -51,7 +60,10 @@ class DialogoPersonalizado : DialogFragment(){
 
     override fun onStart() {
         instancias()
-        acciones()
         super.onStart()
+    }
+
+    interface OnDialogLogin{
+        fun onDialogLogin(usuario: Usuario)
     }
 }

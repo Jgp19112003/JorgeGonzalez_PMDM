@@ -16,7 +16,6 @@ class DialogoListaSimple : DialogFragment() {
     }
 
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
-
         val builder: AlertDialog.Builder = AlertDialog.Builder(requireContext())
         val elementos = arrayOf("Opcion 1", "Opcion 2", "Opcion 3")
         builder.setTitle("Titulo de lista")

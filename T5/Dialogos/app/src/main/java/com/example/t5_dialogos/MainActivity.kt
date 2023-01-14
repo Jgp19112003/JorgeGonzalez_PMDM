@@ -6,8 +6,13 @@ import android.os.Bundle
 import android.view.View
 import com.example.t5_dialogos.databinding.ActivityMainBinding
 import com.example.t5_dialogos.dialagos.*
+import com.example.t5_dialogos.dialagos.model.Usuario
 
-class MainActivity : AppCompatActivity(), View.OnClickListener, DialogoConfirmacion.OnDialogClickListener, DialogoLista.OnDialogSelection, DialogoListaSimple.OnDialogSelectionSimple, DialogoMultiple.OnDialogSelectionMult{
+class MainActivity : AppCompatActivity(), View.OnClickListener,
+    DialogoConfirmacion.OnDialogClickListener, DialogoLista.OnDialogSelection,
+    DialogoListaSimple.OnDialogSelectionSimple, DialogoMultiple.OnDialogSelectionMult,
+    DialogoPersonalizado.OnDialogLogin{
+
     private lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,7 +26,6 @@ class MainActivity : AppCompatActivity(), View.OnClickListener, DialogoConfirmac
         binding.botonLista.setOnClickListener(this)
         binding.botonListamult.setOnClickListener(this)
         binding.botonListasimpl.setOnClickListener(this)
-        binding.botonPersonalizado.setOnClickListener(this)
         binding.botonPersonalizado.setOnClickListener(this)
     }
 
@@ -64,5 +68,10 @@ class MainActivity : AppCompatActivity(), View.OnClickListener, DialogoConfirmac
 
     override fun onDialogSelectionMult(lista: ArrayList<String>) {
         binding.textoListamult.text = lista.size.toString()
+    }
+
+    override fun onDialogLogin(usuario: Usuario) {
+        binding.textoPersonalizado.text = usuario.toString()
+        println(usuario)
     }
 }
