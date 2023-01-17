@@ -31,9 +31,9 @@ class MainActivity : AppCompatActivity(), View.OnClickListener,
 
     override fun onClick(p0: View?) {
         when(p0!!.id){
-            binding.botonConfirmacion.id -> {
+            /*binding.botonConfirmacion.id -> {
 
-            }
+            }*/
             binding.botonConfirmacion.id -> {
                 val dialogoConfirmacion = DialogoConfirmacion()
                 dialogoConfirmacion.show(supportFragmentManager,"")
@@ -75,6 +75,5 @@ class MainActivity : AppCompatActivity(), View.OnClickListener,
 
     override fun onDialogLogin(usuario: Usuario) {
         binding.textoPersonalizado.text = usuario.toString()
-        println(usuario)
     }
 }
