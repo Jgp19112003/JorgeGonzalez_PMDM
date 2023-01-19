@@ -7,12 +7,13 @@ import android.os.Bundle
 import android.widget.DatePicker
 import android.widget.TimePicker
 import com.example.practicadialogos1.databinding.ActivityMainBinding
-import com.example.practicadialogos1.dialogos.DialogoDatosUsuario
-import com.example.practicadialogos1.dialogos.DialogoFecha
-import com.example.practicadialogos1.dialogos.DialogoHora
+import com.example.practicadialogos1.dialogos.*
 import com.example.practicadialogos1.model.Usuario
 
-class MainActivity : AppCompatActivity(), TimePickerDialog.OnTimeSetListener,  DatePickerDialog.OnDateSetListener, DialogoDatosUsuario.OnDialogLogin {
+class MainActivity : AppCompatActivity(),
+    TimePickerDialog.OnTimeSetListener,  DatePickerDialog.OnDateSetListener,
+    DialogoDatosUsuario.OnDialogLogin, DialogoConfirmacion.OnDialogClickConfirmacion,
+    DialogoAsignaturas.OnDialogSelectionMult, DialogoNotaMedia.OnDialogNota{
 
     private lateinit var binding: ActivityMainBinding
     private var hora = 0
@@ -20,7 +21,10 @@ class MainActivity : AppCompatActivity(), TimePickerDialog.OnTimeSetListener,  D
     private var anio = 0
     private var mes = 0
     private var dia = 0
+    private lateinit var notaMedia: String
     private lateinit var usuario: Usuario
+    private lateinit var mensaje: String
+    private lateinit var asignaturas: ArrayList<String>
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -50,5 +54,27 @@ class MainActivity : AppCompatActivity(), TimePickerDialog.OnTimeSetListener,  D
     override fun onDialogLogin(usuario: Usuario) {
         this.usuario = usuario
         //TODO new instance del confirmacion con el texto
+        mensaje = "Buenos dias "+usuario.nombre+", vas a registrar una respuesta el "+dia+"/"+(mes+1)+" a las "+hora+":"+min
+        val dialogoConfirmacion = DialogoConfirmacion.newInstance(mensaje)
+        dialogoConfirmacion.show(supportFragmentManager,"")
+    }
+
+    override fun onDialogClickConfirmacion(boolean: Boolean) {
+        if (boolean) {
+            println(mensaje)
+            DialogoAsignaturas().show(supportFragmentManager,"")
+        }
+    }
+
+    override fun onDialogSelectionMult(lista: ArrayList<String>) {
+        asignaturas = lista
+        asignaturas.forEach { item ->
+            println(item)
+        }
+        DialogoNotaMedia().show(supportFragmentManager,"")
+    }
+
+    override fun onDialogNota(nota: String) {
+        notaMedia = nota
     }
 }
