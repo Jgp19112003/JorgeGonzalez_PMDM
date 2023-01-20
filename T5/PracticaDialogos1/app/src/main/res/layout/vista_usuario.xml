@@ -22,8 +22,8 @@
         android:id="@+id/editText1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="70dp"
-        android:layout_marginRight="45dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
         android:hint="Introduce nombre y apellidos"
         app:layout_constraintTop_toBottomOf="@+id/imagenUsuario"
         tools:layout_editor_absoluteX="0dp" />

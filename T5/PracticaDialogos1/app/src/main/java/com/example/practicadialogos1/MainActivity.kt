@@ -13,7 +13,7 @@ import com.example.practicadialogos1.model.Usuario
 class MainActivity : AppCompatActivity(),
     TimePickerDialog.OnTimeSetListener,  DatePickerDialog.OnDateSetListener,
     DialogoDatosUsuario.OnDialogLogin, DialogoConfirmacion.OnDialogClickConfirmacion,
-    DialogoAsignaturas.OnDialogSelectionMult, DialogoNotaMedia.OnDialogNota{
+    DialogoAsignaturas.OnDialogSelectionMult, DialogoNotaMedia.OnDialogNota,DialogoResumen.OnDialogResumen{
 
     private lateinit var binding: ActivityMainBinding
     private var hora = 0
@@ -24,6 +24,8 @@ class MainActivity : AppCompatActivity(),
     private lateinit var notaMedia: String
     private lateinit var usuario: Usuario
     private lateinit var mensaje: String
+    private lateinit var textoHora: String
+    private lateinit var textoFecha: String
     private lateinit var asignaturas: ArrayList<String>
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -69,12 +71,21 @@ class MainActivity : AppCompatActivity(),
     override fun onDialogSelectionMult(lista: ArrayList<String>) {
         asignaturas = lista
         asignaturas.forEach { item ->
-            println(item)
         }
         DialogoNotaMedia().show(supportFragmentManager,"")
     }
 
     override fun onDialogNota(nota: String) {
         notaMedia = nota
+        textoHora = "$hora:$min"
+        mes++
+        textoFecha = "$dia/$mes/$anio"
+
+        val dialogoResumen = DialogoResumen.newInstance(usuario.nombre,textoHora,textoFecha,asignaturas.size.toString(),notaMedia)
+        dialogoResumen.show(supportFragmentManager,"")
+    }
+
+    override fun onDialogResumen() {
+
     }
 }
