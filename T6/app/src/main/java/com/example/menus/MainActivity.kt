@@ -5,39 +5,54 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.menus.adapter.AdaptadorAsignaturas
 import com.example.menus.databinding.ActivityMainBinding
 import com.google.android.material.snackbar.Snackbar
 
 class MainActivity : AppCompatActivity() {
+
     private lateinit var binding: ActivityMainBinding
+    private lateinit var adaptador: AdaptadorAsignaturas
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
-        val view: View = binding.root;
-        setContentView(view)
+        setContentView(binding.root)
+        setSupportActionBar(binding.toolbar)
+        supportActionBar?.title = "Cambio de titulo"
+        adaptador = AdaptadorAsignaturas(ArrayList<String>(),this)
+
+        binding.recyclerAsignaturas.adapter = adaptador;
+        binding.recyclerAsignaturas.layoutManager = LinearLayoutManager(applicationContext,
+            LinearLayoutManager.VERTICAL,false)
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menuInflater.inflate(R.menu.main_menu,menu)
+        menuInflater.inflate(R.menu.menu_recycler, menu)
         return true
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
 
-        when(item.itemId){
-            R.id.menu_op1 ->  {
-                Snackbar.make(binding.root,"Pulsado item1",Snackbar.LENGTH_INDEFINITE).show()
+
+
+        when (item.itemId) {
+            R.id.menu_add -> {
+                // agregar algo al recycler --> adaptador
+                adaptador.addAsignatura("Prueba")
             }
-            R.id.menu_op2 ->  {
-                Snackbar.make(binding.root,"Pulsado item2",Snackbar.LENGTH_INDEFINITE).show()
-            }
-            R.id.menu_op1_1 ->  {
-                Snackbar.make(binding.root,"Pulsado item2 opcion1",Snackbar.LENGTH_INDEFINITE).show()
-            }
-            R.id.menu_op1_2 ->  {
-                Snackbar.make(binding.root,"Pulsado item2 opcion2",Snackbar.LENGTH_INDEFINITE).show()
+            R.id.menu_clear -> {
+                adaptador.clearAsignaturas()
             }
         }
+
+
+
+
         return true
     }
+
+
 }
