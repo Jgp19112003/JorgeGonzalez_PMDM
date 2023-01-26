@@ -6,8 +6,17 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.menus.R
+import com.example.menus.dialogs.DialogoAdd
+import com.example.menus.dialogs.DialogoDetails
+import com.example.menus.model.Asignatura
 
-class AdaptadorAsignaturas (var listaAsignaturas: ArrayList<String>, var contexto: Context): RecyclerView.Adapter<AdaptadorAsignaturas.MyHolder>() {
+class AdaptadorAsignaturas (var listaAsignaturas: ArrayList<Asignatura>, var contexto: Context): RecyclerView.Adapter<AdaptadorAsignaturas.MyHolder>() {
+
+    private lateinit var listener: OnRecyclerAsignaturaListener
+
+    init {
+        listener = contexto as OnRecyclerAsignaturaListener
+    }
 
     inner class MyHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
@@ -27,11 +36,15 @@ class AdaptadorAsignaturas (var listaAsignaturas: ArrayList<String>, var context
 
     override fun onBindViewHolder(holder: MyHolder, position: Int) {
 
-        val nombre = listaAsignaturas[position]
-        holder.itemNombre.setText(nombre)
+        val asignatura = listaAsignaturas[position]
+        holder.itemNombre.setText(asignatura.siglas)
+
+        holder.itemNombre.setOnClickListener{
+            listener.onAsignaturaSelected(asignatura)
+        }
     }
 
-    fun addAsignatura(asignatura: String){
+    fun addAsignatura(asignatura: Asignatura){
         this.listaAsignaturas.add(asignatura)
         this.notifyItemInserted(listaAsignaturas.size-1)
     }
@@ -44,4 +57,9 @@ class AdaptadorAsignaturas (var listaAsignaturas: ArrayList<String>, var context
     override fun getItemCount(): Int {
         return listaAsignaturas.size
     }
+
+    interface OnRecyclerAsignaturaListener{
+        fun onAsignaturaSelected(asignatura: Asignatura)
+    }
+
 }
