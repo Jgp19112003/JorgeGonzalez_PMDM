@@ -6,20 +6,25 @@ import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
+import android.widget.AdapterView
+import android.widget.AdapterView.OnItemSelectedListener
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.menus.adapter.AdaptadorAsignatura
 import com.example.menus.databinding.ActivityMainBinding
 import com.example.menus.dialogs.DialogoAdd
 import com.example.menus.dialogs.DialogoDetails
 import com.example.menus.dialogs.DialogoFiltrar
+import com.example.menus.dialogs.DialogoIntroducirFiltro
 import com.example.menus.model.Asignatura
 import com.google.android.material.snackbar.Snackbar
 
-class MainActivity : AppCompatActivity(), DialogoAdd.OnDialogAddAsignatura
-    , AdaptadorAsignatura.OnRecyclerAsignaturaListener, DialogoDetails.OnDialogDetails, DialogoFiltrar.OnDialogFiltrar {
+class MainActivity : AppCompatActivity(), DialogoAdd.OnDialogAddAsignatura,
+    AdaptadorAsignatura.OnRecyclerAsignaturaListener, DialogoDetails.OnDialogDetails,
+    DialogoFiltrar.OnDialogFiltrar, DialogoIntroducirFiltro.OnDialogIntroducirFiltro{
 
     private lateinit var binding: ActivityMainBinding
     private lateinit var adaptador: AdaptadorAsignatura
+    private lateinit var seleccionado: String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,11 +32,13 @@ class MainActivity : AppCompatActivity(), DialogoAdd.OnDialogAddAsignatura
         setContentView(binding.root)
         setSupportActionBar(binding.toolbar)
         supportActionBar?.title = ""
-        adaptador = AdaptadorAsignatura(ArrayList<Asignatura>(),this)
+        adaptador = AdaptadorAsignatura(ArrayList<Asignatura>(), this)
 
         binding.recyclerAsignaturas.adapter = adaptador;
-        binding.recyclerAsignaturas.layoutManager = LinearLayoutManager(applicationContext,
-            LinearLayoutManager.VERTICAL,false)
+        binding.recyclerAsignaturas.layoutManager = LinearLayoutManager(
+            applicationContext,
+            LinearLayoutManager.VERTICAL, false
+        )
 
     }
 
@@ -43,18 +50,17 @@ class MainActivity : AppCompatActivity(), DialogoAdd.OnDialogAddAsignatura
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
 
 
-
         when (item.itemId) {
             R.id.menu_add -> {
                 // agregar algo al recycler --> adaptador
-                DialogoAdd().show(supportFragmentManager,"")
+                DialogoAdd().show(supportFragmentManager, "")
 
             }
             R.id.menu_clear -> {
                 adaptador.clearAsignaturas()
             }
             R.id.menu_filtrar -> {
-                DialogoFiltrar().show(supportFragmentManager,"")
+                DialogoFiltrar().show(supportFragmentManager, "")
             }
         }
         return true
@@ -62,12 +68,19 @@ class MainActivity : AppCompatActivity(), DialogoAdd.OnDialogAddAsignatura
 
     override fun OnDialogAddAsignatura(asignatura: Asignatura) {
         adaptador.addAsignatura(asignatura)
-        Log.v("asignatura",asignatura.nombre)
+        Log.v("asignatura", asignatura.nombre)
     }
 
     override fun onAsignaturaSelected(asignatura: Asignatura) {
-        DialogoDetails().show(supportFragmentManager,"")
-        DialogoDetails.newInstance(asignatura.siglas,asignatura.nombre,asignatura.nombreProfesor,asignatura.horas,asignatura.ciclo,asignatura.curso).show(supportFragmentManager,"")
+        DialogoDetails().show(supportFragmentManager, "")
+        DialogoDetails.newInstance(
+            asignatura.siglas,
+            asignatura.nombre,
+            asignatura.nombreProfesor,
+            asignatura.horas,
+            asignatura.ciclo,
+            asignatura.curso
+        ).show(supportFragmentManager, "")
     }
 
     override fun OnDialogDetails() {
@@ -76,16 +89,21 @@ class MainActivity : AppCompatActivity(), DialogoAdd.OnDialogAddAsignatura
 
     override fun OnDialogFiltrar(seleccionado: String) {
         // TODO Hacer el filtro
+        this.seleccionado = seleccionado
+        DialogoIntroducirFiltro().show(supportFragmentManager,"")
+    }
 
-        when(seleccionado){
+    override fun OnDialogIntroducirFiltro(filtroIntroducido: String) {
+
+        when (seleccionado) {
             "Curso" -> {
-                //adaptador.cambiarLista(adaptador.listaAsignaturas.filter { it.curso == "DAM" } as ArrayList<Asignatura>)
-                // TODO hacer filtro, que salga un segundo dialogo e introduzca por lo que quiere filtrar.
+                adaptador.cambiarLista(adaptador.listaAsignaturas.filter { it.curso == filtroIntroducido } as ArrayList<Asignatura>)
             }
             "Ciclo" -> {
-
-            }"Horas" -> {
-
+                adaptador.cambiarLista(adaptador.listaAsignaturas.filter { it.ciclo == filtroIntroducido } as ArrayList<Asignatura>)
+            }
+            "Horas" -> {
+                adaptador.cambiarLista(adaptador.listaAsignaturas.filter { it.horas == filtroIntroducido } as ArrayList<Asignatura>)
             }
         }
     }

@@ -44,7 +44,8 @@ class AdaptadorAsignatura (var listaAsignaturas: ArrayList<Asignatura>, var cont
 
     fun cambiarLista(listaNueva: ArrayList<Asignatura>){
         this.listaAsignaturas = listaNueva;
-        notifyDataSetChanged()
+        println("cambiada")
+        this.notifyDataSetChanged()
     }
 
     fun addAsignatura(asignatura: Asignatura){

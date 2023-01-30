@@ -86,7 +86,6 @@ class DialogoDetails : DialogFragment(){
         editCurso = vista.findViewById(R.id.edit_curso)
         editHoras = vista.findViewById(R.id.edit_horas)
         editNombreProfesor = vista.findViewById(R.id.edit_nombreProfesor)
-        Log.v("instancias","instanciado")
     }
 
     interface OnDialogDetails{

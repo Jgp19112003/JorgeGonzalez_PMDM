@@ -65,6 +65,7 @@ class DialogoAdd : DialogFragment(){
         editNombreProfesor = vista.findViewById(R.id.texto_nombreProfesor)
         spinnerHoras = vista.findViewById(R.id.horas_spinner)
         spinnerCurso = vista.findViewById(R.id.curso_spinner)
+        spinnerCiclo = vista.findViewById(R.id.ciclo_spinner)
 
         arrayHoras = ArrayList()
         arrayHoras.add("3")
@@ -87,6 +88,7 @@ class DialogoAdd : DialogFragment(){
         arrayCiclo.add("DAW")
         arrayCiclo.add("ASIR")
         adaptadorCiclo = ArrayAdapter(requireContext(),android.R.layout.simple_spinner_item,arrayCiclo)
+        spinnerCiclo.adapter = adaptadorCiclo
     }
 
     override fun onStart() {
