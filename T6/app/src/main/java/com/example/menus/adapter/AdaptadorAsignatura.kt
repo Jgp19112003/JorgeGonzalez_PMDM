@@ -1,4 +1,5 @@
 package com.example.menus.adapter
+
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
@@ -6,16 +7,13 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.menus.R
-import com.example.menus.dialogs.DialogoAdd
-import com.example.menus.dialogs.DialogoDetails
 import com.example.menus.model.Asignatura
 
-class AdaptadorAsignaturas (var listaAsignaturas: ArrayList<Asignatura>, var contexto: Context): RecyclerView.Adapter<AdaptadorAsignaturas.MyHolder>() {
-
-    private lateinit var listener: OnRecyclerAsignaturaListener
+class AdaptadorAsignatura (var listaAsignaturas: ArrayList<Asignatura>, var contexto: Context): RecyclerView.Adapter<AdaptadorAsignatura.MyHolder>() {
+    private lateinit var listener: AdaptadorAsignatura.OnRecyclerAsignaturaListener
 
     init {
-        listener = contexto as OnRecyclerAsignaturaListener
+        listener = contexto as AdaptadorAsignatura.OnRecyclerAsignaturaListener
     }
 
     inner class MyHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -28,13 +26,13 @@ class AdaptadorAsignaturas (var listaAsignaturas: ArrayList<Asignatura>, var con
 
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AdaptadorAsignatura.MyHolder {
 
         val vista = LayoutInflater.from(contexto).inflate(R.layout.item_recycler,parent,false)
         return MyHolder(vista)
     }
 
-    override fun onBindViewHolder(holder: MyHolder, position: Int) {
+    override fun onBindViewHolder(holder: AdaptadorAsignatura.MyHolder, position: Int) {
 
         val asignatura = listaAsignaturas[position]
         holder.itemNombre.setText(asignatura.siglas)
@@ -42,6 +40,11 @@ class AdaptadorAsignaturas (var listaAsignaturas: ArrayList<Asignatura>, var con
         holder.itemNombre.setOnClickListener{
             listener.onAsignaturaSelected(asignatura)
         }
+    }
+
+    fun cambiarLista(listaNueva: ArrayList<Asignatura>){
+        this.listaAsignaturas = listaNueva;
+        notifyDataSetChanged()
     }
 
     fun addAsignatura(asignatura: Asignatura){
@@ -61,5 +64,4 @@ class AdaptadorAsignaturas (var listaAsignaturas: ArrayList<Asignatura>, var con
     interface OnRecyclerAsignaturaListener{
         fun onAsignaturaSelected(asignatura: Asignatura)
     }
-
 }

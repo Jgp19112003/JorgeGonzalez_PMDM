@@ -25,6 +25,10 @@ class DialogoAdd : DialogFragment(){
     lateinit var arrayCurso: ArrayList<String>
     lateinit var spinnerCurso: Spinner
     lateinit var adaptadorCurso: ArrayAdapter<String>
+    lateinit var arrayCiclo: ArrayList<String>
+    lateinit var spinnerCiclo: Spinner
+    lateinit var adaptadorCiclo: ArrayAdapter<String>
+
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
@@ -43,7 +47,7 @@ class DialogoAdd : DialogFragment(){
     fun acciones(){
         botonAdd.setOnClickListener{
             var asignatura: Asignatura = (Asignatura(editSiglas.text.toString(),editNombre.text.toString(),
-                editNombreProfesor.text.toString(),spinnerHoras.id.toString(),"2",spinnerCurso.id.toString()))
+                editNombreProfesor.text.toString(),spinnerHoras.selectedItem.toString(),spinnerCiclo.selectedItem.toString(),spinnerCurso.selectedItem.toString()))
             listener.OnDialogAddAsignatura(asignatura)
 
             dismiss()
@@ -63,20 +67,26 @@ class DialogoAdd : DialogFragment(){
         spinnerCurso = vista.findViewById(R.id.curso_spinner)
 
         arrayHoras = ArrayList()
-        adaptadorHoras = ArrayAdapter(requireContext(),android.R.layout.simple_spinner_item,arrayHoras)
-        spinnerHoras.adapter = adaptadorHoras
         arrayHoras.add("3")
         arrayHoras.add("4")
         arrayHoras.add("5")
         arrayHoras.add("6")
         arrayHoras.add("7")
         arrayHoras.add("8")
+        adaptadorHoras = ArrayAdapter(requireContext(),android.R.layout.simple_spinner_item,arrayHoras)
+        spinnerHoras.adapter = adaptadorHoras
 
         arrayCurso = ArrayList()
-        adaptadorCurso = ArrayAdapter(requireContext(),android.R.layout.simple_spinner_item,arrayCurso)
-        spinnerCurso.adapter = adaptadorCurso
         arrayCurso.add("1")
         arrayCurso.add("2")
+        adaptadorCurso = ArrayAdapter(requireContext(),android.R.layout.simple_spinner_item,arrayCurso)
+        spinnerCurso.adapter = adaptadorCurso
+
+        arrayCiclo = ArrayList()
+        arrayCiclo.add("DAM")
+        arrayCiclo.add("DAW")
+        arrayCiclo.add("ASIR")
+        adaptadorCiclo = ArrayAdapter(requireContext(),android.R.layout.simple_spinner_item,arrayCiclo)
     }
 
     override fun onStart() {

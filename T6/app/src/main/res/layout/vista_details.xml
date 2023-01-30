@@ -19,14 +19,15 @@
             android:layout_height="wrap_content"
             android:layout_weight="0.5"
             android:text="Siglas:"
-            android:textSize="15dp" />
+            android:textSize="15dp"
+            android:id="@+id/texto_siglas" />
 
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="0.5"
-            android:id="@+id/texto_siglas"
+            android:id="@+id/edit_siglas"
             android:textSize="15dp"/>
 
 
@@ -49,7 +50,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="0.5"
-            android:id="@+id/texto_nombre"
+            android:id="@+id/edit_nombre"
             android:textSize="15dp"/>
 
 
@@ -72,7 +73,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="0.5"
-            android:id="@+id/texto_nombreProfesor"
+            android:id="@+id/edit_nombreProfesor"
             android:textSize="15dp"/>
 
 
@@ -92,10 +93,10 @@
 
 
         <TextView
-            android:id="@+id/texto_horas"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="0.5"
+            android:id="@+id/edit_horas"
             />
 
     </LinearLayout>
@@ -114,7 +115,7 @@
 
 
         <TextView
-            android:id="@+id/texto_ciclo"
+            android:id="@+id/edit_ciclo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="0.5"
@@ -136,7 +137,7 @@
 
 
         <TextView
-            android:id="@+id/texto_cuso"
+            android:id="@+id/edit_curso"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="0.5"

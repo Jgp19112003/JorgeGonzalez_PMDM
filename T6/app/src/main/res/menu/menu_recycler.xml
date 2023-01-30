@@ -6,5 +6,7 @@
 
     <item android:title="Vaciar elemento"
         android:id="@+id/menu_clear"/>
+    <item android:title="Filtrar"
+        android:id="@+id/menu_filtrar"/>
 
 </menu>
