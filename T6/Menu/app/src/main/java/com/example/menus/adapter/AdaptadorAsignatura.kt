@@ -12,6 +12,7 @@ import com.example.menus.model.Asignatura
 class AdaptadorAsignatura (var listaAsignaturas: ArrayList<Asignatura>, var contexto: Context): RecyclerView.Adapter<AdaptadorAsignatura.MyHolder>() {
     private lateinit var listener: AdaptadorAsignatura.OnRecyclerAsignaturaListener
 
+
     init {
         listener = contexto as AdaptadorAsignatura.OnRecyclerAsignaturaListener
     }
