@@ -43,8 +43,8 @@ class AdaptadorRecycler(var contexto: Context, var listaDatos: ArrayList<Viaje>)
 
     override fun onBindViewHolder(holder: MyHolder, position: Int) {
         var viaje: Viaje = listaDatos.get(position) as Viaje
-        holder.imagen.setImageResource(viaje.imagen)
-        holder.nombre.setText(viaje.nombre)
+        holder.imagen.setImageResource(viaje.ciudad.imagen)
+        holder.nombre.setText(viaje.ciudad.nombre)
 
         holder.boton_verDetalle.setOnClickListener {
             Snackbar.make(

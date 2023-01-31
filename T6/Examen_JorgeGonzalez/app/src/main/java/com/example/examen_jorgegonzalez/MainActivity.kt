@@ -25,16 +25,18 @@ import com.example.examen_jorgegonzalez.models.Viaje
 import java.util.*
 import kotlin.collections.ArrayList
 
-class MainActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListener, DialogoFechaOrigen.OnDialogoFecha, TimePickerDialog.OnTimeSetListener{
+class MainActivity : AppCompatActivity(),
+    DatePickerDialog.OnDateSetListener, DialogoFechaOrigen.OnDialogoFecha,
+    TimePickerDialog.OnTimeSetListener, DialogoFechaDestino.OnDialogoFechaD{
 
     private lateinit var binding: ActivityMainBinding
     private lateinit var adaptadorRecycler: AdaptadorRecycler
     private lateinit var arrayCiudades: ArrayList<Ciudad>
     private lateinit var adaptadorOrigen: AdaptadorOrigen
     private lateinit var adaptadorDestino: AdaptadorDestino
-    val anio = Calendar.getInstance().get(Calendar.YEAR)
-    val mes = Calendar.getInstance().get(Calendar.MONTH)
-    val day = Calendar.getInstance().get(Calendar.DATE)
+    private var anio: Int = 0
+    private var mes: Int = 0
+    private var dia: Int = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -58,27 +60,30 @@ class MainActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListener, Di
         arrayCiudades.add(Ciudad(R.drawable.londres,"Barcelona"))
         arrayCiudades.add(Ciudad(R.drawable.miami,"Miami"))
         arrayCiudades.add(Ciudad(R.drawable.newyork,"NewYork"))
-
         arrayCiudades.add(Ciudad(R.drawable.sanfrancisco,"SanFrancisco"))
 
         adaptadorOrigen = AdaptadorOrigen(arrayCiudades,this)
         binding.spinnerOrigen.adapter = adaptadorOrigen
 
         adaptadorDestino = AdaptadorDestino(arrayCiudades,this)
-        binding.spinnerOrigen.adapter = adaptadorDestino
+        binding.spinnerDestino.adapter = adaptadorDestino
     }
 
     private fun acciones() {
         binding.textoFechaO.setOnClickListener{
             DialogoFechaOrigen().show(supportFragmentManager,"")
+            binding.textoFechaO.text = "${dia}/${mes+1}/${anio}"
+            DialogoHora().show(supportFragmentManager,"")
 
         }
         binding.textoFechaD.setOnClickListener{
-            DialogoFechaDestino().show(supportFragmentManager,"")
+            DialogoFechaDestino.newInstance(anio,mes,dia).show(supportFragmentManager,"")
+            binding.textoFechaD.text = "${dia}/${mes+1}/${anio}"
+            DialogoHora().show(supportFragmentManager,"")
         }
 
         binding.botonAdd.setOnClickListener {
-            //adaptadorRecycler.addViaje(Viaje())
+            adaptadorRecycler.addViaje(Viaje(binding.spinnerDestino.selectedItem as Ciudad,binding.textoFechaO.text.toString(),binding.textoFechaD.text.toString()))
         }
     }
 
@@ -103,14 +108,24 @@ class MainActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListener, Di
     }
 
     override fun onDateSet(view: DatePicker?, year: Int, month: Int, dayOfMonth: Int) {
+        anio = year
+        mes = month
+        dia = dayOfMonth
+
+        binding.textoFechaD.text = "${dia}/${mes+1}/${anio}"
 
     }
 
     override fun OnDialogoFecha() {
-        DialogoHora().show(supportFragmentManager,"")
+
+
     }
 
     override fun onTimeSet(view: TimePicker?, hourOfDay: Int, minute: Int) {
+
+    }
+
+    override fun OnDialogoFechaD() {
 
     }
 }

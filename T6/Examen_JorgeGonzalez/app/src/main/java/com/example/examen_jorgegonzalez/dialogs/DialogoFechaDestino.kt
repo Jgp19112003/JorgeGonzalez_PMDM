@@ -8,10 +8,10 @@ import androidx.fragment.app.DialogFragment
 
 class DialogoFechaDestino: DialogFragment() {
 
-    private lateinit var listener: DialogoFechaOrigen.OnDialogoFecha
+    private lateinit var listener: OnDialogoFechaD
     override fun onAttach(context: Context) {
         super.onAttach(context)
-        listener = context as DialogoFechaOrigen.OnDialogoFecha
+        listener = context as OnDialogoFechaD
     }
 
     companion object{
@@ -33,8 +33,12 @@ class DialogoFechaDestino: DialogFragment() {
         var mes = this.arguments?.get("mes") as Int
         var dia = this.arguments?.get("dia") as Int
         val dialogoHora = DatePickerDialog(requireContext(),activity as DatePickerDialog.OnDateSetListener,anio,mes,dia)
-        listener.OnDialogoFecha()
+        listener.OnDialogoFechaD()
         return dialogoHora
+    }
+
+    interface OnDialogoFechaD{
+        fun OnDialogoFechaD()
     }
 
 }

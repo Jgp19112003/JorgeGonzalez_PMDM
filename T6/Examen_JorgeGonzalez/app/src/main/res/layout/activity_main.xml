@@ -37,6 +37,7 @@
             android:id="@+id/texto_fecha_o"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:gravity="center"
             android:layout_weight="0.5"
             android:textSize="15dp" />
 
@@ -63,6 +64,7 @@
             android:id="@+id/texto_fecha_d"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:gravity="center"
             android:layout_weight="0.5"
             android:textSize="15dp" />
 
