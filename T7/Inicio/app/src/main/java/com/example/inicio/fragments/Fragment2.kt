@@ -11,16 +11,34 @@ class Fragment2 : Fragment() {
 
     private lateinit var binding: Fragment2Binding
 
+    companion object{
+        fun newInstance(mensaje: String): Fragment2 {
+
+
+            val args = Bundle()
+            args.putString("mensaje", mensaje)
+            val fragment = Fragment2()
+            fragment.arguments = args
+            return fragment
+        }
+    }
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val binding = Fragment2Binding.inflate(inflater,container,false)
+        binding = Fragment2Binding.inflate(inflater,container,false)
         return binding.root
     }
 
     override fun onStart() {
         super.onStart()
+        acciones()
+    }
+
+    private fun acciones() {
+        var mensaje = this.arguments?.get("mensaje")
+        binding.textoNombre.text = mensaje.toString()
     }
 }

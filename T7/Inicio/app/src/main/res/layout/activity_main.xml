@@ -12,10 +12,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:name="com.example.inicio.fragments.FragmentHeader"
-        tools:layout="@layout/fragment_header" />
+        tools:layout="@layout/fragment_header"
+        android:tag="fragmentEstatico"/>
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="horizontal">
     <Button
         android:layout_margin="5dp"

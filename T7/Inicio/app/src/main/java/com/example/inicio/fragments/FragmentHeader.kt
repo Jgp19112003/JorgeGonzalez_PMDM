@@ -19,7 +19,7 @@ class FragmentHeader: Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val binding = FragmentHeaderBinding.inflate(inflater,container,false)
+        binding = FragmentHeaderBinding.inflate(inflater,container,false)
         return binding.root
     }
 
