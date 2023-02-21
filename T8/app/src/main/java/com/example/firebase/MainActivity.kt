@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
 
         binding.botonCrear.setOnClickListener {
             auth.createUserWithEmailAndPassword("jgp19112003@gmail.com","admin1234")
-            
+
         }
 
     }
