@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace 'com.example.practicadialogos2'
+    namespace 'com.example.practicadialogos3'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.example.practicadialogos2"
+        applicationId "com.example.practicadialogos3"
         minSdk 24
         targetSdk 33
         versionCode 1
@@ -29,6 +29,9 @@ android {
     }
     kotlinOptions {
         jvmTarget = '1.8'
+    }
+    viewBinding {
+        enabled true
     }
 }
 
