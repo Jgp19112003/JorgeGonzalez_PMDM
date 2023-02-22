@@ -1,0 +1,9 @@
+<resources>
+    <string-array name="puestos_array">
+        <item>Administrativo</item>
+        <item>Comercial</item>
+        <item>Soporte</item>
+        <item>Informática</item>
+
+    </string-array>
+</resources>
