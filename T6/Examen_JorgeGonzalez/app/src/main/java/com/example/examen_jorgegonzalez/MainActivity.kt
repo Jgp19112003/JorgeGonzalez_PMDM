@@ -25,7 +25,7 @@ import com.example.examen_jorgegonzalez.models.Viaje
 import java.util.*
 import kotlin.collections.ArrayList
 
-class   MainActivity : AppCompatActivity(),
+class MainActivity : AppCompatActivity(),
     DatePickerDialog.OnDateSetListener, DialogoFechaOrigen.OnDialogoFecha,
     TimePickerDialog.OnTimeSetListener, DialogoFechaDestino.OnDialogoFechaD{
 
