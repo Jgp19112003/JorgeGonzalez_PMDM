@@ -1,4 +1,4 @@
-package com.example.practicadialogos3
+package com.example.practicadialogos2
 
 import org.junit.Test
 

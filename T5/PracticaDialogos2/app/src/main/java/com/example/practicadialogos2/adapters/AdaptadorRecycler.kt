@@ -37,7 +37,7 @@ class AdaptadorRecycler(var contexto: Context, var listaDatos: ArrayList<Usuario
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyHolder {
         val view: View =
-            LayoutInflater.from(contexto).inflate(R.layout.layout_recycler, parent, false)
+            LayoutInflater.from(contexto).inflate(R.layout.layout_recycler, parent, false)  
         return MyHolder(view)
     }
 
