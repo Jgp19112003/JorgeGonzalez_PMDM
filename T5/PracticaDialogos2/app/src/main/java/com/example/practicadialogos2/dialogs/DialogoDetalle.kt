@@ -21,6 +21,12 @@ class DialogoDetalle : DialogFragment() {
     private lateinit var edad_label: TextView
     private lateinit var puesto_label: TextView
 
+    private lateinit var nombre: String
+    private lateinit var apellido: String
+    private lateinit var correo: String
+    private lateinit var edad: String
+    private lateinit var puesto: String
+
     companion object {
         // todo lo declarado aqui es accesible directamente
         // 1. TODO creo un método newInstance como parametro lo que va a recibir el dialogo
@@ -51,11 +57,11 @@ class DialogoDetalle : DialogFragment() {
     override fun onAttach(context: Context) {
         super.onAttach(context)
         // 3. TODO recupero todos los argumentos que quiera utilizar
-        this.nombre_label.text = this.arguments?.getString("nombre") ?: "Sin nombre"
-        this.apellido_label.text = this.arguments?.getString("apellido") ?: "Sin apellido"
-        this.correo_label.text = this.arguments?.getString("correo") ?: "Sin correo"
-        this.edad_label.text = this.arguments?.getString("edad") ?: "Sin edad"
-        this.puesto_label.text   = this.arguments?.getString("puesto") ?: "Sin puesto"
+        this.nombre = this.arguments?.getString("nombre") ?: "Sin nombre"
+        this.apellido = this.arguments?.getString("apellido") ?: "Sin apellido"
+        this.correo = this.arguments?.getString("correo") ?: "Sin correo"
+        this.edad = this.arguments?.getString("edad") ?: "Sin edad"
+        this.puesto   = this.arguments?.getString("puesto") ?: "Sin puesto"
     }
 
 
@@ -74,6 +80,12 @@ class DialogoDetalle : DialogFragment() {
         correo_label = vista.findViewById(R.id.detalle_correo)
         edad_label = vista.findViewById(R.id.detalle_edad)
         puesto_label = vista.findViewById(R.id.detalle_puesto)
+
+        nombre_label.text = "Nombre: $nombre"
+        apellido_label.text = "Apellido: $apellido"
+        correo_label.text = "Correo: $correo"
+        edad_label.text = "Edad: $edad"
+        puesto_label.text = "Puesto: $puesto"
     }
 
     override fun onStart() {

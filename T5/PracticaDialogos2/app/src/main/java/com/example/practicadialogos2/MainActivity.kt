@@ -8,9 +8,10 @@ import com.example.practicadialogos2.adapters.AdaptadorRecycler
 
 import com.example.practicadialogos2.R
 import com.example.practicadialogos2.databinding.ActivityMainBinding
+import com.example.practicadialogos2.dialogs.DialogoDetalle
 import com.example.practicadialogos2.model.Usuario
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), AdaptadorRecycler.OnDialogRecycler {
 
     lateinit var binding: ActivityMainBinding
     lateinit var adaptadorRecycler: AdaptadorRecycler
@@ -45,10 +46,20 @@ class MainActivity : AppCompatActivity() {
                     binding.nombreEdit.text.toString(),
                     binding.apellidosEdit.text.toString(),
                     binding.correoEdit.text.toString(),
-                    binding.edadEdit.toString(),
+                    binding.edadEdit.text.toString(),
                     binding.spinnerPuesto.selectedItem.toString()
                 )
             )
         }
+    }
+
+    override fun OnDialogRecycler(usuario: Usuario) {
+        DialogoDetalle.newInstance(
+            usuario.nombre,
+            usuario.apellido,
+            usuario.correo,
+            usuario.edad,
+            usuario.puesto
+        ).show(supportFragmentManager,"")
     }
 }
