@@ -46,6 +46,10 @@ class SecondActivity : AppCompatActivity() {
             .child("nombre")
             .setValue(nombre)
 
+        binding.botonAgregar.setOnClickListener {
+            fDataBase.getReference("usuarios").child(uid.toString()).child("productos_fav").child("nombre").setValue(binding.editNombreProducto.text.toString())
+            fDataBase.getReference("usuarios").child(uid.toString()).child("productos_fav").child("valor").setValue(binding.editValor.text.toString())
+        }
 
     }
 }

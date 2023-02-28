@@ -10,18 +10,18 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Introduce nombre:"
-
+        android:id="@+id/edit_nombre_producto"
         />
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Introduce valor:"
-
-        />
+        android:id="@+id/edit_valor"/>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Agregar"/>
+        android:text="Agregar"
+        android:id="@+id/boton_agregar"/>
 
 </LinearLayout>
