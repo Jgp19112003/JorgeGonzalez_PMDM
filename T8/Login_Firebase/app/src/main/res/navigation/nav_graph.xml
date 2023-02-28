@@ -14,11 +14,30 @@
         <action
             android:id="@+id/action_FirstFragment_to_SecondFragment"
             app:destination="@id/SecondFragment" />
+        <action
+            android:id="@+id/action_FirstFragment_to_secondActivity"
+            app:destination="@id/secondActivity" />
     </fragment>
     <fragment
         android:id="@+id/SecondFragment"
         android:name="com.example.login_firebase.SecondFragment"
         android:label="second_fragment_label"
-        tools:layout="@layout/fragment_second">
+        tools:layout="@layout/fragment_register">
+        <action
+            android:id="@+id/action_SecondFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
     </fragment>
+
+    <activity
+        android:id="@+id/secondActivity"
+        android:name="com.example.login_firebase.SecondActivity"
+        android:label="activity_second"
+        tools:layout="@layout/second_activity" >
+    <argument
+        android:name="uid"
+        app:argType="string" />
+    <argument
+        android:name="nombre"
+        app:argType="string" />
+    </activity>
 </navigation>
