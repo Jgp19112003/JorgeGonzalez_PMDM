@@ -10,8 +10,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="384bedf1-fa9a-4c2d-9e7b-139f2cada6b6" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/login_firebase/SecondActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/login_firebase/SecondActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/login_firebase/SecondFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/login_firebase/SecondFragment.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/second_activity.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/second_activity.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

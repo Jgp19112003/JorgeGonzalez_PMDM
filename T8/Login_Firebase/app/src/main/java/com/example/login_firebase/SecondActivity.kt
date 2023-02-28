@@ -14,7 +14,6 @@ class SecondActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         fDataBase =
             FirebaseDatabase.getInstance("https://fir-ces-jgp-default-rtdb.firebaseio.com/")
         binding = SecondActivityBinding.inflate(layoutInflater)
@@ -45,6 +44,8 @@ class SecondActivity : AppCompatActivity() {
             .child(uid.toString())
             .child("nombre")
             .setValue(nombre)
+
+        binding.textoNombre.text = "Hola $nombre"
 
         binding.botonAgregar.setOnClickListener {
             fDataBase.getReference("usuarios").child(uid.toString()).child("productos_fav").child("nombre").setValue(binding.editNombreProducto.text.toString())

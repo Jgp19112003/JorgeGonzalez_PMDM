@@ -33,8 +33,6 @@ class SecondFragment : Fragment(){
         super.onViewCreated(view, savedInstanceState)
 
         binding.botonRegistrar.setOnClickListener {
-
-
             aut.createUserWithEmailAndPassword(
                 binding.editCorreo.text.toString(),
                 binding.editPass.text.toString()
