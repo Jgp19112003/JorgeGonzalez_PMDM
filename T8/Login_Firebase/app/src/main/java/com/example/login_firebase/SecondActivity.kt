@@ -1,6 +1,7 @@
 package com.example.login_firebase
 
 import android.os.Bundle
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.example.login_firebase.databinding.SecondActivityBinding
 import com.example.login_firebase.model.Producto
@@ -58,6 +59,7 @@ class SecondActivity : AppCompatActivity() {
 
         binding.botonRecuperar.setOnClickListener {
             fDataBase.getReference("usuarios")
+                .child(uid!!)
                 .child("productos_fav")
                 .addValueEventListener(object : ValueEventListener {
                     override fun onDataChange(snapshot: DataSnapshot) {
@@ -65,6 +67,7 @@ class SecondActivity : AppCompatActivity() {
                         for (i in snapshot.children){
                             //i.key.toString()
                             val producto = i.getValue(Producto::class.java)
+                            Log.v("salida",producto!!.valor.toString())
                         }
                     }
 
