@@ -40,18 +40,25 @@ class FirstFragment : Fragment() {
 
         //if login success cambio pantalla
         binding.botonLogin.setOnClickListener {
-            if (!binding.editNombre.text.isEmpty() && !binding.editPassword.text.isEmpty())
-                auth.signInWithEmailAndPassword(binding.editNombre.text.toString(), binding.editPassword.text.toString()).addOnCompleteListener {
+            if (!binding.editNombre.text.isEmpty() && !binding.editPassword.text.isEmpty()) {
+                auth.signInWithEmailAndPassword(
+                    binding.editNombre.text.toString(),
+                    binding.editPassword.text.toString()
+                ).addOnCompleteListener {
                     if (it.isSuccessful) {
                         val bundle = Bundle()
-                        bundle.putString("nombre",binding.editNombre.text.toString())
-                        bundle.putString("uid",auth.currentUser!!.uid)
-                        findNavController().navigate(R.id.action_FirstFragment_to_secondActivity,bundle)
+                        bundle.putString("nombre", binding.editNombre.text.toString())
+                        bundle.putString("uid", auth.currentUser!!.uid)
+                        findNavController().navigate(
+                            R.id.action_FirstFragment_to_secondActivity,
+                            bundle
+                        )
                     } else {
                         Snackbar.make(view, "Los datos son incorrectos", Snackbar.LENGTH_LONG)
                             .show()
                     }
                 }
+            }
         }
         binding.botonRegister.setOnClickListener {
             findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)

@@ -123,8 +123,57 @@ class AdaptadorRecycler(var contexto: Context, var listaDatos: ArrayList<Viaje>)
         fun onCiudadSelected(ciudad: Ciudad)
     }
 }
+// DIALOGO
+class DialogoDatosUsuario : DialogFragment(){
 
-//DIALOGO DETALLE
+    private lateinit var vista: View
+    private lateinit var botonLogin: Button
+    private lateinit var editNombre: EditText
+    private lateinit var listener: OnDialogLogin
+
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+        listener = context as OnDialogLogin
+    }
+
+    override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
+
+        val builder: AlertDialog.Builder = AlertDialog.Builder(requireContext())
+        vista = LayoutInflater.from(requireContext()).inflate(R.layout.vista_usuario,null)
+        builder.setView(vista)
+
+        return builder.create();
+    }
+
+    fun acciones(){
+        botonLogin.setOnClickListener{
+            var usuario: Usuario = (Usuario(editNombre.text.toString()))
+            listener.onDialogLogin(usuario)
+
+            dismiss()
+        }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        acciones()
+    }
+    fun instancias(){
+        botonLogin = vista.findViewById(R.id.botonLogin)
+        editNombre = vista.findViewById(R.id.editText1)
+    }
+
+    override fun onStart() {
+        instancias()
+        super.onStart()
+    }
+
+    interface OnDialogLogin{
+        fun onDialogLogin(usuario: Usuario)
+    }
+}
+
+//DIALOGO DETALLE COMPANION
 
 class DialogoDetalle : DialogFragment() {
 
@@ -209,4 +258,33 @@ class DialogoDetalle : DialogFragment() {
     }
 }
 
+// MENU
+    private lateinit var binding: ActivityMainBinding
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+        setSupportActionBar(binding.toolbar)
+
+
+    }
+
+
+
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        menuInflater.inflate(R.menu.menu_main, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        // AQUI LAS ACCIONES DE CADA OPCION DEL MENU
+         when (item.itemId) {
+            R.id.menu_add -> {
+                DialogoAdd().show(supportFragmentManager, "")
+
+            }
+    }
 */
