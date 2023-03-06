@@ -10,10 +10,61 @@ class MainActivity : AppCompatActivity() {
     }
 }
 /*
+FRAGMENTLOGIN//
+class LoginFragment : Fragment() {
+
+
+
+    private var _binding: FragmentFirstBinding? = null
+    private lateinit var auth: FirebaseAuth
+
+    private val binding get() = _binding!!
+
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        auth = FirebaseAuth.getInstance()
+        _binding = FragmentFirstBinding.inflate(inflater, container, false)
+        return binding.root
+
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        binding.botonLogin.setOnClickListener {
+            if (!binding.editCorreo.text.isEmpty() || !binding.editPassword.text.isEmpty()){
+                auth.signInWithEmailAndPassword(binding.editCorreo.text.toString(),binding.editPassword.text.toString()).addOnCompleteListener {
+                    if (it.isSuccessful){
+                        //Pasar elementos a la otra pantalla
+                        val bundle = Bundle()
+                        bundle.putString("correo",binding.editCorreo.text.toString())
+                        bundle.putString("uid",auth.currentUser!!.uid)
+                        findNavController().navigate(R.id.action_FirstFragment_to_SecondActivity,bundle)
+                    }
+                }
+            } else {
+                Snackbar.make(binding.root, "Datos incorrectos", Snackbar.LENGTH_SHORT)
+                    .show()
+            }
+        }
+
+        binding.botonRegister.setOnClickListener {
+            findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
+        }
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
+}
 BASE ADAPTER//
 
 --MAIN--
 private lateinit var adaptadorDestino: AdaptadorDestino
+private lateinit var adaptadorSencillo: ArrayAdapter<CharSequence>
         INSTANCIAS
 arrayCiudades = ArrayList()
 (pers)
@@ -22,6 +73,7 @@ binding.spinnerDestino.adapter = adaptadorDestino
 (sencillo)
 adaptadorSencillo = ArrayAdapter.createFromResource(applicationContext,R.array.paises,android.R.layout.simple_spinner_item)
 adaptadorSencillo.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+binding.spinnerDestino.adapter = adaptadorDestino
 
 --CLASE--
  class AdaptadorDestino (var listaCiudades: ArrayList<Ciudad>, var contexto: Context) : BaseAdapter(){
@@ -287,4 +339,26 @@ class DialogoDetalle : DialogFragment() {
 
             }
     }
+
+//SNAPSHOT
+    binding.botonVerMisCoches.setOnClickListener {
+            adaptadorRecycler.listaDatos.clear()
+            fDataBase.getReference("usuarios")
+                .child(uid!!)
+                .child("coche")
+                .addValueEventListener(object : ValueEventListener {
+                    override fun onDataChange(snapshot: DataSnapshot) {
+                        for (i in snapshot.children) {
+                            val coche = i.getValue(Coche::class.java)
+                            Log.v("coche", coche!!.toString())
+                            adaptadorRecycler.addCoche(coche)
+                        }
+                    }
+
+                    override fun onCancelled(error: DatabaseError) {
+
+                    }
+
+                })
+        }
 */

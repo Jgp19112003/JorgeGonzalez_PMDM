@@ -28,13 +28,27 @@
 
     <Spinner
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/spinner_marca"/>
+        android:layout_height="50dp"
+        android:id="@+id/spinner_color"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"/>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Agregar"
         android:id="@+id/boton_agregar_coche"/>
+
+    <Button
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Ver mis coches"
+    android:id="@+id/boton_ver_mis_coches"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/recyclerCoches"
+        />
 
 </LinearLayout>
