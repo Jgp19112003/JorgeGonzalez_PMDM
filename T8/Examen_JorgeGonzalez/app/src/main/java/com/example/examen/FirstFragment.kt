@@ -9,6 +9,7 @@ import androidx.navigation.fragment.findNavController
 import com.example.examen.databinding.FirstFragmentBinding
 import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.FirebaseDatabase
 
 class FirstFragment  : Fragment() {
 
@@ -16,7 +17,6 @@ class FirstFragment  : Fragment() {
 
     private var _binding: FirstFragmentBinding? = null
     private lateinit var auth: FirebaseAuth
-
     private val binding get() = _binding!!
 
     override fun onCreateView(
