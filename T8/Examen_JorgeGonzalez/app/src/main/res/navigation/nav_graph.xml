@@ -7,9 +7,9 @@
 
     <fragment
         android:id="@+id/FirstFragment"
-        android:name="com.example.login_firebase.FirstFragment"
+        android:name="com.example.examen."
         android:label="first_fragment_label"
-        tools:layout="@layout/fragment_first">
+        tools:layout="@layout/first_fragment">
 
         <action
             android:id="@+id/action_FirstFragment_to_SecondFragment"
@@ -21,24 +21,12 @@
 
     <fragment
         android:id="@+id/SecondFragment"
-        android:name="com.example.login_firebase.SecondFragment"
+        android:name="com.example.examen.SecondFragment"
         android:label="second_fragment_label"
-        tools:layout="@layout/fragment_register">
+        tools:layout="@layout/second_fragment">
         <action
             android:id="@+id/action_SecondFragment_to_FirstFragment"
             app:destination="@id/FirstFragment" />
     </fragment>
 
-    <activity
-        android:id="@+id/secondActivity"
-        android:name="com.example.login_firebase.SecondActivity"
-        android:label="activity_second"
-        tools:layout="@layout/second_activity" >
-    <argument
-        android:name="uid"
-        app:argType="string" />
-    <argument
-        android:name="nombre"
-        app:argType="string" />
-    </activity>
 </navigation>

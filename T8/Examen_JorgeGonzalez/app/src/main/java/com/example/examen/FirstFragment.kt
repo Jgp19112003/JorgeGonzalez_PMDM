@@ -1,25 +1,22 @@
-package com.example.ejerciciorepaso
+package com.example.examen
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.example.ejerciciorepaso.databinding.FragmentFirstBinding
+import com.example.examen.databinding.FirstFragmentBinding
 import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.FirebaseAuth
 
-
-class LoginFragment : Fragment() {
-
+class FirstFragment  : Fragment() {
 
 
-    private var _binding: FragmentFirstBinding? = null
+
+    private var _binding: FirstFragmentBinding? = null
     private lateinit var auth: FirebaseAuth
 
-    // This property is only valid between onCreateView and
-    // onDestroyView.
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -27,7 +24,7 @@ class LoginFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         auth = FirebaseAuth.getInstance()
-        _binding = FragmentFirstBinding.inflate(inflater, container, false)
+        _binding = FirstFragmentBinding.inflate(inflater, container, false)
         return binding.root
 
     }
@@ -35,7 +32,7 @@ class LoginFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.botonLogin.setOnClickListener {
+        /*binding.botonLogin.setOnClickListener {
             if (!binding.editCorreo.text.isEmpty() || !binding.editPassword.text.isEmpty()){
                 auth.signInWithEmailAndPassword(binding.editCorreo.text.toString(),binding.editPassword.text.toString()).addOnCompleteListener {
                     if (it.isSuccessful){
@@ -54,7 +51,7 @@ class LoginFragment : Fragment() {
 
         binding.botonRegister.setOnClickListener {
             findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
-        }
+        }*/
     }
 
     override fun onDestroyView() {
