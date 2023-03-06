@@ -10,59 +10,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="384bedf1-fa9a-4c2d-9e7b-139f2cada6b6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../Examen_JorgeGonzalez/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Examen_JorgeGonzalez/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Examen_JorgeGonzalez/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Examen_JorgeGonzalez/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Examen_JorgeGonzalez/.idea/deploymentTargetDropDown.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Examen_JorgeGonzalez/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Examen_JorgeGonzalez/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Examen_JorgeGonzalez/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Examen_JorgeGonzalez/app/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Examen_JorgeGonzalez/app/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Examen_JorgeGonzalez/app/proguard-rules.pro" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Examen_JorgeGonzalez/app/src/androidTest/java/com/example/examen/ExampleInstrumentedTest.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Examen_JorgeGonzalez/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Examen_JorgeGonzalez/app/src/main/java/com/example/examen/FirstFragment.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Examen_JorgeGonzalez/app/src/main/java/com/example/examen/MainActivity.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Examen_JorgeGonzalez/app/src/main/java/com/example/examen/SecondFragment.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Examen_JorgeGonzalez/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Examen_JorgeGonzalez/app/src/main/res/drawable/ic_launcher_background.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Examen_JorgeGonzalez/app/src/main/res/layout/activity_main.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Examen_JorgeGonzalez/app/src/main/res/layout/content_main.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Examen_JorgeGonzalez/app/src/main/res/layout/first_fragment.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Examen_JorgeGonzalez/app/src/main/res/layout/second_fragment.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Examen_JorgeGonzalez/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Examen_JorgeGonzalez/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Examen_JorgeGonzalez/app/src/main/res/mipmap-anydpi-v33/ic_launcher.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Examen_JorgeGonzalez/app/src/main/res/mipmap-hdpi/ic_launcher.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Examen_JorgeGonzalez/app/src/main/res/mipmap-hdpi/ic_launcher_round.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Examen_JorgeGonzalez/app/src/main/res/mipmap-mdpi/ic_launcher.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Examen_JorgeGonzalez/app/src/main/res/mipmap-mdpi/ic_launcher_round.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Examen_JorgeGonzalez/app/src/main/res/mipmap-xhdpi/ic_launcher.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Examen_JorgeGonzalez/app/src/main/res/mipmap-xhdpi/ic_launcher_round.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Examen_JorgeGonzalez/app/src/main/res/mipmap-xxhdpi/ic_launcher.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Examen_JorgeGonzalez/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Examen_JorgeGonzalez/app/src/main/res/mipmap-xxxhdpi/ic_launcher.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Examen_JorgeGonzalez/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Examen_JorgeGonzalez/app/src/main/res/navigation/nav_graph.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Examen_JorgeGonzalez/app/src/main/res/values-night/themes.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Examen_JorgeGonzalez/app/src/main/res/values/colors.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Examen_JorgeGonzalez/app/src/main/res/values/strings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Examen_JorgeGonzalez/app/src/main/res/values/themes.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Examen_JorgeGonzalez/app/src/main/res/xml/backup_rules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Examen_JorgeGonzalez/app/src/main/res/xml/data_extraction_rules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Examen_JorgeGonzalez/app/src/test/java/com/example/examen/ExampleUnitTest.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Examen_JorgeGonzalez/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Examen_JorgeGonzalez/gradle.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Examen_JorgeGonzalez/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Examen_JorgeGonzalez/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Examen_JorgeGonzalez/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Examen_JorgeGonzalez/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Examen_JorgeGonzalez/settings.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/content_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/content_main.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/navigation/nav_graph.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/navigation/nav_graph.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Examen_JorgeGonzalez/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../Examen_JorgeGonzalez/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Examen_JorgeGonzalez/app/src/main/java/com/example/examen/FirstFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../Examen_JorgeGonzalez/app/src/main/java/com/example/examen/FirstFragment.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
