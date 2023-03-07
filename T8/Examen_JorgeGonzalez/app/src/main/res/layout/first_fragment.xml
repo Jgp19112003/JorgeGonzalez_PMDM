@@ -5,8 +5,29 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     tools:context=".MainActivity"
-    android:padding="16dp">
+    android:padding="16dp"
+    android:gravity="center">
 
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Introduce correo: "
+        android:id="@+id/edit_correo"/>
+
+    <EditText
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Introduce password: "
+        android:id="@+id/edit_password"/>
+
+    <Button
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:id="@+id/boton_login"/>
 
 
 </LinearLayout>
