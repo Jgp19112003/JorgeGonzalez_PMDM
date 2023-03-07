@@ -19,7 +19,7 @@
             app:destination="@id/secondActivity" />
     </fragment>
 
-    <fragment
+    <fragmenth
         android:id="@+id/SecondFragment"
         android:name="com.example.examen.SecondFragment"
         android:label="second_fragment_label"
@@ -27,6 +27,6 @@
         <action
             android:id="@+id/action_SecondFragment_to_FirstFragment"
             app:destination="@id/FirstFragment" />
-    </fragment>
+    </fragmenth>
 
 </navigation>
