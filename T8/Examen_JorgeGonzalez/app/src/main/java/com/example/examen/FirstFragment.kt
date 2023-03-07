@@ -39,12 +39,12 @@ class FirstFragment  : Fragment() {
                         val bundle = Bundle()
                         bundle.putInt("logoncount",logoncount)
                         bundle.putString("uid",auth.currentUser!!.uid)
-                       // findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment,bundle)
+                        findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment,bundle)
+                    } else {
+                        Snackbar.make(binding.root, "AVISO: Datos incorrectos", Snackbar.LENGTH_SHORT)
+                            .show()
                     }
                 }
-            } else {
-                Snackbar.make(binding.root, "AVISO: Datos incorrectos", Snackbar.LENGTH_SHORT)
-                    .show()
             }
         }
     }

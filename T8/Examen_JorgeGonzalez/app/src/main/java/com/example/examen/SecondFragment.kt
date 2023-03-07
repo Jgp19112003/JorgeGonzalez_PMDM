@@ -31,8 +31,6 @@ class SecondFragment : Fragment(){
     ): View? {
         fDatabase = FirebaseDatabase.getInstance("https://fir-ces-jgp-default-rtdb.firebaseio.com/")
         _binding = SecondFragmentBinding.inflate(inflater, container, false)
-        uid = savedInstanceState!!.getString("uid")
-        logoncount = savedInstanceState.getInt("logoncount")
 
         adaptadorRecycler = AdaptadorRecycler(requireContext(),ArrayList<Producto>())
         binding.recyclerProductos.adapter = adaptadorRecycler;

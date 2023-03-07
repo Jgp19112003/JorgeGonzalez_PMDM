@@ -7,19 +7,17 @@
 
     <fragment
         android:id="@+id/FirstFragment"
-        android:name="com.example.examen."
+        android:name="com.example.examen.FirstFragment"
         android:label="first_fragment_label"
         tools:layout="@layout/first_fragment">
 
         <action
             android:id="@+id/action_FirstFragment_to_SecondFragment"
             app:destination="@id/SecondFragment" />
-        <action
-            android:id="@+id/action_FirstFragment_to_secondActivity"
-            app:destination="@id/secondActivity" />
+
     </fragment>
 
-    <fragmenth
+    <fragment
         android:id="@+id/SecondFragment"
         android:name="com.example.examen.SecondFragment"
         android:label="second_fragment_label"
@@ -27,6 +25,6 @@
         <action
             android:id="@+id/action_SecondFragment_to_FirstFragment"
             app:destination="@id/FirstFragment" />
-    </fragmenth>
+    </fragment>
 
 </navigation>
