@@ -14,10 +14,10 @@ import com.google.firebase.database.FirebaseDatabase
 class FirstFragment  : Fragment() {
 
 
-
     private var _binding: FirstFragmentBinding? = null
     private lateinit var auth: FirebaseAuth
     private val binding get() = _binding!!
+     private var logoncount: Int = 0
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -31,27 +31,22 @@ class FirstFragment  : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        /*binding.botonLogin.setOnClickListener {
+        binding.botonLogin.setOnClickListener {
             if (!binding.editCorreo.text.isEmpty() || !binding.editPassword.text.isEmpty()){
                 auth.signInWithEmailAndPassword(binding.editCorreo.text.toString(),binding.editPassword.text.toString()).addOnCompleteListener {
                     if (it.isSuccessful){
-                        //Pasar elementos a la otra pantalla
+                        logoncount++
                         val bundle = Bundle()
-                        bundle.putString("correo",binding.editCorreo.text.toString())
+                        bundle.putInt("logoncount",logoncount)
                         bundle.putString("uid",auth.currentUser!!.uid)
-                        findNavController().navigate(R.id.action_FirstFragment_to_SecondActivity,bundle)
+                       // findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment,bundle)
                     }
                 }
             } else {
-                Snackbar.make(binding.root, "Datos incorrectos", Snackbar.LENGTH_SHORT)
+                Snackbar.make(binding.root, "AVISO: Datos incorrectos", Snackbar.LENGTH_SHORT)
                     .show()
             }
         }
-
-        binding.botonRegister.setOnClickListener {
-            findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
-        }*/
     }
 
     override fun onDestroyView() {
