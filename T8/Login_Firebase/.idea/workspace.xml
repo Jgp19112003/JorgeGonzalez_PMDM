@@ -10,15 +10,60 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="384bedf1-fa9a-4c2d-9e7b-139f2cada6b6" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../Examen_JorgeGonzalez/.idea/deploymentTargetDropDown.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Examen_JorgeGonzalez/app/src/main/java/com/example/examen/FirstFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../Examen_JorgeGonzalez/app/src/main/java/com/example/examen/FirstFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Examen_JorgeGonzalez/app/src/main/java/com/example/examen/Producto.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../Examen_JorgeGonzalez/app/src/main/java/com/example/examen/Producto.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Examen_JorgeGonzalez/app/src/main/java/com/example/examen/SecondFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../Examen_JorgeGonzalez/app/src/main/java/com/example/examen/SecondFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Examen_JorgeGonzalez/app/src/main/java/com/example/examen/adapters/AdaptadorRecycler.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../Examen_JorgeGonzalez/app/src/main/java/com/example/examen/adapters/AdaptadorRecycler.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Examen_JorgeGonzalez/app/src/main/res/layout/recycler_view.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Examen_JorgeGonzalez/app/src/main/res/layout/recycler_view.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Examen_JorgeGonzalez/app/src/main/res/navigation/nav_graph.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Examen_JorgeGonzalez/app/src/main/res/navigation/nav_graph.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Examen_JorgeGonzalez/app/src/main/res/values-night/themes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Examen_JorgeGonzalez/app/src/main/res/values-night/themes.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Examen_JorgeGonzalez/app/src/main/res/values/themes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Examen_JorgeGonzalez/app/src/main/res/values/themes.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Subida_Jorge_Gonzalez/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Subida_Jorge_Gonzalez/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Subida_Jorge_Gonzalez/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Subida_Jorge_Gonzalez/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Subida_Jorge_Gonzalez/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Subida_Jorge_Gonzalez/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Subida_Jorge_Gonzalez/app/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Subida_Jorge_Gonzalez/app/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Subida_Jorge_Gonzalez/app/proguard-rules.pro" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Subida_Jorge_Gonzalez/app/src/androidTest/java/com/example/subida_jorge_gonzalez/ExampleInstrumentedTest.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Subida_Jorge_Gonzalez/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Subida_Jorge_Gonzalez/app/src/main/java/com/example/subida_jorge_gonzalez/FirstFragment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Subida_Jorge_Gonzalez/app/src/main/java/com/example/subida_jorge_gonzalez/MainActivity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Subida_Jorge_Gonzalez/app/src/main/java/com/example/subida_jorge_gonzalez/SecondFragment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Subida_Jorge_Gonzalez/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Subida_Jorge_Gonzalez/app/src/main/res/drawable/ic_launcher_background.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Subida_Jorge_Gonzalez/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Subida_Jorge_Gonzalez/app/src/main/res/layout/content_main.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Subida_Jorge_Gonzalez/app/src/main/res/layout/fragment_first.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Subida_Jorge_Gonzalez/app/src/main/res/layout/fragment_second.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Subida_Jorge_Gonzalez/app/src/main/res/menu/menu_main.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Subida_Jorge_Gonzalez/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Subida_Jorge_Gonzalez/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Subida_Jorge_Gonzalez/app/src/main/res/mipmap-anydpi-v33/ic_launcher.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Subida_Jorge_Gonzalez/app/src/main/res/mipmap-hdpi/ic_launcher.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Subida_Jorge_Gonzalez/app/src/main/res/mipmap-hdpi/ic_launcher_round.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Subida_Jorge_Gonzalez/app/src/main/res/mipmap-mdpi/ic_launcher.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Subida_Jorge_Gonzalez/app/src/main/res/mipmap-mdpi/ic_launcher_round.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Subida_Jorge_Gonzalez/app/src/main/res/mipmap-xhdpi/ic_launcher.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Subida_Jorge_Gonzalez/app/src/main/res/mipmap-xhdpi/ic_launcher_round.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Subida_Jorge_Gonzalez/app/src/main/res/mipmap-xxhdpi/ic_launcher.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Subida_Jorge_Gonzalez/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Subida_Jorge_Gonzalez/app/src/main/res/mipmap-xxxhdpi/ic_launcher.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Subida_Jorge_Gonzalez/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Subida_Jorge_Gonzalez/app/src/main/res/navigation/nav_graph.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Subida_Jorge_Gonzalez/app/src/main/res/values-land/dimens.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Subida_Jorge_Gonzalez/app/src/main/res/values-night/themes.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Subida_Jorge_Gonzalez/app/src/main/res/values-w1240dp/dimens.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Subida_Jorge_Gonzalez/app/src/main/res/values-w600dp/dimens.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Subida_Jorge_Gonzalez/app/src/main/res/values/colors.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Subida_Jorge_Gonzalez/app/src/main/res/values/dimens.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Subida_Jorge_Gonzalez/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Subida_Jorge_Gonzalez/app/src/main/res/values/themes.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Subida_Jorge_Gonzalez/app/src/main/res/xml/backup_rules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Subida_Jorge_Gonzalez/app/src/main/res/xml/data_extraction_rules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Subida_Jorge_Gonzalez/app/src/test/java/com/example/subida_jorge_gonzalez/ExampleUnitTest.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Subida_Jorge_Gonzalez/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Subida_Jorge_Gonzalez/gradle.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Subida_Jorge_Gonzalez/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Subida_Jorge_Gonzalez/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Subida_Jorge_Gonzalez/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Subida_Jorge_Gonzalez/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Subida_Jorge_Gonzalez/settings.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
