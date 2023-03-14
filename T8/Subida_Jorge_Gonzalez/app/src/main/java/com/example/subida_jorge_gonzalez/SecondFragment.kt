@@ -36,7 +36,7 @@ class SecondFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-    
+
         /*fDatabase.getReference("usuarios")
             .child(uid!!)
             .child("logoncount")
